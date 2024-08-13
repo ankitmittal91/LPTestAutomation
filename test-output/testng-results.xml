@@ -1,84 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="7" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-12T18:54:56 IST" name="Suite" finished-at="2024-08-12T18:55:05 IST" duration-ms="9391">
+  <suite started-at="2024-08-13T20:33:35 IST" name="Suite" finished-at="2024-08-13T20:34:12 IST" duration-ms="36242">
     <groups>
-      <group name="Smoke">
-        <method signature="OldApplyPageTests.fillApplyFormSuccess()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@7b2bbc3]" name="fillApplyFormSuccess" class="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests"/>
-      </group> <!-- Smoke -->
+      <group name="APISmokeSuite">
+        <method signature="applyFundingFlow.idologyAPITests()[pri:3, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" name="idologyAPITests" class="LendingPointTestAutomation.apiTests.applyFundingFlow"/>
+        <method signature="applyFundingFlow.qualifyAPITest()[pri:1, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" name="qualifyAPITest" class="LendingPointTestAutomation.apiTests.applyFundingFlow"/>
+        <method signature="applyFundingFlow.saveLoanPaymentDetailAPITest()[pri:4, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" name="saveLoanPaymentDetailAPITest" class="LendingPointTestAutomation.apiTests.applyFundingFlow"/>
+        <method signature="applyFundingFlow.saveOfferAPITest()[pri:2, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" name="saveOfferAPITest" class="LendingPointTestAutomation.apiTests.applyFundingFlow"/>
+      </group> <!-- APISmokeSuite -->
     </groups>
-    <test started-at="2024-08-12T18:54:56 IST" name="Smoke" finished-at="2024-08-12T18:55:05 IST" duration-ms="9391">
-      <class name="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@7b2bbc3]" started-at="2024-08-12T18:54:55 IST" name="loadConfig" finished-at="2024-08-12T18:54:56 IST" duration-ms="241" status="PASS">
+    <test started-at="2024-08-13T20:33:35 IST" name="APISmokeSuite" finished-at="2024-08-13T20:34:12 IST" duration-ms="36242">
+      <class name="LendingPointTestAutomation.apiTests.applyFundingFlow">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" started-at="2024-08-13T20:33:35 IST" name="loadConfig" finished-at="2024-08-13T20:33:35 IST" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@7b2bbc3]" started-at="2024-08-12T18:54:56 IST" name="launchApplication" finished-at="2024-08-12T18:55:03 IST" duration-ms="7733" status="PASS">
+        <test-method signature="qualifyAPITest()[pri:1, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" started-at="2024-08-13T20:33:35 IST" name="qualifyAPITest" finished-at="2024-08-13T20:33:51 IST" duration-ms="15457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qualifyAPITest -->
+        <test-method signature="saveOfferAPITest()[pri:2, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" started-at="2024-08-13T20:33:51 IST" name="saveOfferAPITest" finished-at="2024-08-13T20:34:04 IST" duration-ms="13451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveOfferAPITest -->
+        <test-method signature="idologyAPITests()[pri:3, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" started-at="2024-08-13T20:34:04 IST" name="idologyAPITests" finished-at="2024-08-13T20:34:07 IST" duration-ms="2680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- idologyAPITests -->
+        <test-method signature="saveLoanPaymentDetailAPITest()[pri:4, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" started-at="2024-08-13T20:34:07 IST" name="saveLoanPaymentDetailAPITest" finished-at="2024-08-13T20:34:12 IST" duration-ms="4614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveLoanPaymentDetailAPITest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:LendingPointTestAutomation.apiTests.applyFundingFlow@7b2bbc3]" started-at="2024-08-13T20:34:12 IST" name="afterSuite" finished-at="2024-08-13T20:34:12 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- LendingPointTestAutomation.apiTests.applyFundingFlow -->
+    </test> <!-- APISmokeSuite -->
+  </suite> <!-- Suite -->
+  <suite started-at="2024-08-13T20:34:12 IST" name="Suite (0)" finished-at="2024-08-13T20:36:53 IST" duration-ms="161057">
+    <groups>
+      <group name="Smoke">
+        <method signature="OldApplyPageTests.fillApplyFormSuccess()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@3b69e7d1]" name="fillApplyFormSuccess" class="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2024-08-13T20:34:12 IST" name="Smoke" finished-at="2024-08-13T20:36:53 IST" duration-ms="161057">
+      <class name="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@3b69e7d1]" started-at="2024-08-13T20:34:12 IST" name="loadConfig" finished-at="2024-08-13T20:34:12 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@3b69e7d1]" started-at="2024-08-13T20:34:12 IST" name="launchApplication" finished-at="2024-08-13T20:34:21 IST" duration-ms="8724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="fillApplyFormSuccess()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@7b2bbc3]" started-at="2024-08-12T18:55:03 IST" name="fillApplyFormSuccess" finished-at="2024-08-12T18:55:05 IST" duration-ms="1219" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:819)
-at org.testng.Assert.assertEquals(Assert.java:829)
-at LendingPointTestAutomation.applyOldUITests.OldApplyPageTests.fillApplyFormSuccess(OldApplyPageTests.java:49)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1207)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="fillApplyFormSuccess()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@3b69e7d1]" started-at="2024-08-13T20:34:21 IST" name="fillApplyFormSuccess" finished-at="2024-08-13T20:36:53 IST" duration-ms="152032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillApplyFormSuccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@7b2bbc3]" started-at="2024-08-12T18:55:05 IST" name="tearDown" finished-at="2024-08-12T18:55:05 IST" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@3b69e7d1]" started-at="2024-08-13T20:36:53 IST" name="tearDown" finished-at="2024-08-13T20:36:53 IST" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@7b2bbc3]" started-at="2024-08-12T18:55:05 IST" name="afterSuite" finished-at="2024-08-12T18:55:06 IST" duration-ms="355" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@3b69e7d1]" started-at="2024-08-13T20:36:53 IST" name="afterSuite" finished-at="2024-08-13T20:36:53 IST" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- LendingPointTestAutomation.applyOldUITests.OldApplyPageTests -->
     </test> <!-- Smoke -->
-  </suite> <!-- Suite -->
-  <suite started-at="2024-08-12T18:55:06 IST" name="AutomationSuite" finished-at="2024-08-12T18:55:06 IST" duration-ms="0">
+  </suite> <!-- Suite (0) -->
+  <suite started-at="2024-08-13T20:36:53 IST" name="AutomationSuite" finished-at="2024-08-13T20:36:53 IST" duration-ms="0">
     <groups>
     </groups>
   </suite> <!-- AutomationSuite -->

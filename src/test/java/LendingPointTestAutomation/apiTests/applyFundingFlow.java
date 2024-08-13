@@ -13,7 +13,7 @@ import io.restassured.response.Response;
 public class applyFundingFlow extends BaseClass{
 
 String offerId, leadId, applicationId;
-	@Test (priority = 1)
+	@Test (priority = 1, groups = "APISmokeSuite")
 	public void qualifyAPITest() {
 		requestParam.put("firstName", "JOHN");
 		requestParam.put("lastName", "SMITH");
@@ -65,7 +65,7 @@ String offerId, leadId, applicationId;
 		requestParam.clear();
 	}
 	
-	@Test (priority = 2)
+	@Test (priority = 2, groups = "APISmokeSuite")
 	public void saveOfferAPITest() {
 		Response response = RestAssured.given()
 					.baseUri(prop.getProperty("apiEnvironmentUrl"))
@@ -88,7 +88,7 @@ String offerId, leadId, applicationId;
 		Assert.assertEquals(jsonResponse.getString("offerMessage"), "Pass");
 	}
 	
-	@Test (priority = 3)
+	@Test (priority = 3, groups = "APISmokeSuite")
 	public void idologyAPITests() {
 		requestParam.put("firstName", "JOHN");
 		requestParam.put("lastName", "SMITH");
@@ -121,7 +121,7 @@ String offerId, leadId, applicationId;
 		requestParam.clear();
 	}
 	
-	@Test (priority = 4)
+	@Test (priority = 4, groups = "APISmokeSuite")
 	public void saveLoanPaymentDetailAPITest() {
 		requestParam.put("oneTimePayment", "false");
 		requestParam.put("bankName", "Bank of America");

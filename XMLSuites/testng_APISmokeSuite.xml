@@ -9,8 +9,7 @@
   </run>
   </groups>
     <classes>
-      <class name="LendingPointTestAutomation.apiTests.qualifyAPITests"/>
-      <class name="LendingPointTestAutomation.apiTests.saveOfferTests"/>
+      <class name="LendingPointTestAutomation.apiTests.applyFundingFlow"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
