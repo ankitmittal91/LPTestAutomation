@@ -50,6 +50,7 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 				options.addArguments("--disable-dev-shm-usage");
 				options.addArguments("--ignore-ssl-errors=yes");
 				options.addArguments("--ignore-certificate-errors");
+				options.addArguments("--remote-debugging-pipe");
 				options.addArguments("--headless");
 				options.addArguments("window-size=1920,1200");
 				driver = new ChromeDriver(options);
