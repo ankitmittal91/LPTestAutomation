@@ -31,7 +31,7 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 		DOMConfigurator.configure("log4j.xml");
 		ExtentManager.setExtent();
 		try {
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\configurations\\configurationFile.properties");
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/configurationFile.properties");
 		prop = new Properties();
 		prop.load(file);
 		} catch(FileNotFoundException e) {
