@@ -3,5 +3,6 @@
 <suite name="AutomationSuite">
   	<suite-files>
 	  	<suite-file path="XMLSuites/testng_Smoke.xml"></suite-file>
+	  	<suite-file path="XMLSuites/testng_APISmokeSuite.xml"></suite-file>
   	</suite-files>
 </suite> <!-- Suite -->
