@@ -61,6 +61,9 @@ OldEmploymentPage oldEmploymentPage;
 		oldApplyPage.enterPassword("Test@123");
 		oldOfferPage = oldApplyPage.clickCheckMyOptionButton();
 				Log.info("User has clicked check my options button");
+				Action.fluentWaitTillExists(driver, oldOfferPage.blockscreen, 30);
+				Action.fluentWaitTillExists(driver, oldOfferPage.blockscreenHide, 30);
+				Action.fluentWaitTillExists(driver, oldOfferPage.blockscreen, 30);
 				Action.fluentWait(driver, oldOfferPage.selectOfferTitle, 30);
 				Action.fluentWait(driver, oldOfferPage.phoneVerificationPopupTitle, 10);
 		if(Action.isDisplayed(driver, oldOfferPage.phoneVerificationPopupTitle) == true) {

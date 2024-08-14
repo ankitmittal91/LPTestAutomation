@@ -41,6 +41,12 @@ public class OldOfferPage extends BaseClass{
 	@FindBy(xpath = "//div[@class='messages error-message message-validation col-xs-12 text-center']")
 	public WebElement verificationPopupError;
 	
+	@FindBy(xpath = "//div[@class='blockscreen hide']")
+	public WebElement blockscreenHide;
+	
+	@FindBy(xpath = "//div[@class='blockscreen']")
+	public WebElement blockscreen;
+	
 	public OldBankInformationPage clickChooseButton() {
 		//Action.moveToElement(driver, chooseButton);
 		Action.click(driver, chooseButton);
