@@ -44,13 +44,9 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 	public static void launchBrowser(String url, String browserType) {
 		String browserName = prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().browserInDocker().setup();
 			if(browserType.equalsIgnoreCase("Headless")) {
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--disable-dev-shm-usage");
-				options.addArguments("--ignore-ssl-errors=yes");
-				options.addArguments("--ignore-certificate-errors");
-				options.addArguments("--remote-debugging-pipe");
 				options.addArguments("--headless");
 				options.addArguments("window-size=1920,1200");
 				driver = new ChromeDriver(options);
