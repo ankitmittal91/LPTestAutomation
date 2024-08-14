@@ -56,7 +56,7 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 			}	
 		}
 		if(browserName.equalsIgnoreCase("Firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().browserInDocker().setup();
 			if(browserType.equalsIgnoreCase("Headless")) {
 				FirefoxOptions options = new FirefoxOptions();
 				options.addArguments("--headless");
@@ -69,7 +69,7 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 			
 		}
 		if(browserName.equalsIgnoreCase("IE")) {
-			WebDriverManager.iedriver().setup();
+			WebDriverManager.iedriver().browserInDocker().setup();
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 		}
