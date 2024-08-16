@@ -2556,3 +2556,53 @@
 2024-08-14 17:37:58 DEBUG cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view_en.ftl"): Not found
 2024-08-14 17:37:58 DEBUG cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view.ftl"): Found
 2024-08-14 17:37:58 DEBUG cache:45 - Loading template for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/ankit.mittal/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/v3html/logs-view/v3-html-testrunner-logs-view.ftl"
+2024-08-16 10:04:46 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-08-16 10:04:51 INFO  Log:20 - User has filled the form till phone number
+2024-08-16 10:05:14 INFO  Log:20 - User has filled the form till Zip
+2024-08-16 10:05:16 INFO  Log:20 - User has clicked check my options button
+2024-08-16 10:09:11 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-08-16 10:09:20 INFO  Log:20 - User has filled the form till phone number
+2024-08-16 10:09:43 INFO  Log:20 - User has filled the form till Zip
+2024-08-16 10:09:44 INFO  Log:20 - User has clicked check my options button
+2024-08-16 10:11:06 INFO  Log:20 - User is on Phone verification popup
+2024-08-16 10:11:06 INFO  Log:20 - User has entered verification code
+2024-08-16 10:11:11 INFO  Log:20 - User has exited Phone verification popup
+2024-08-16 10:11:11 INFO  Log:20 - User has selected offer on new offer page
+2024-08-16 10:11:36 INFO  Log:20 - User has clicked connect with Plaid button
+2024-08-16 10:12:52 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-08-16 10:12:55 INFO  Log:20 - User has filled the form till phone number
+2024-08-16 10:13:18 INFO  Log:20 - User has filled the form till Zip
+2024-08-16 10:13:20 INFO  Log:20 - User has clicked check my options button
+2024-08-16 10:13:40 INFO  Log:20 - Reached wait 1
+2024-08-16 10:14:01 INFO  Log:20 - Reached wait 2
+2024-08-16 10:16:02 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-08-16 10:16:05 INFO  Log:20 - User has filled the form till phone number
+2024-08-16 10:16:28 INFO  Log:20 - User has filled the form till Zip
+2024-08-16 10:16:29 INFO  Log:20 - User has clicked check my options button
+2024-08-16 10:16:29 INFO  Log:20 - Reached wait 1
+2024-08-16 10:16:29 INFO  Log:20 - Reached wait 2
+2024-08-16 10:16:29 INFO  Log:20 - Reached wait 3
+2024-08-16 10:16:29 INFO  Log:20 - Reached wait 4
+2024-08-16 10:21:27 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-08-16 10:21:31 INFO  Log:20 - User has filled the form till phone number
+2024-08-16 10:21:54 INFO  Log:20 - User has filled the form till Zip
+2024-08-16 10:21:55 INFO  Log:20 - User has clicked check my options button
+2024-08-16 10:22:16 INFO  Log:20 - Reached wait 1
+2024-08-16 10:22:36 INFO  Log:20 - Reached wait 2
+2024-08-16 10:22:36 INFO  Log:20 - Reached wait 3
+2024-08-16 10:22:36 INFO  Log:20 - Reached wait 4
+2024-08-16 10:22:36 INFO  Log:20 - User is on Phone verification popup
+2024-08-16 10:22:37 INFO  Log:20 - User has entered verification code
+2024-08-16 10:22:39 INFO  Log:20 - User has exited Phone verification popup
+2024-08-16 10:22:39 INFO  Log:20 - User has selected offer on old offer page
+2024-08-16 10:23:54 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-08-16 10:23:57 INFO  Log:20 - User has filled the form till phone number
+2024-08-16 10:24:20 INFO  Log:20 - User has filled the form till Zip
+2024-08-16 10:24:21 INFO  Log:20 - User has clicked check my options button
+2024-08-16 10:24:42 INFO  Log:20 - Reached wait 1
+2024-08-16 10:24:44 INFO  Log:20 - Reached wait 2
+2024-08-16 10:24:48 INFO  Log:20 - Reached wait 3
+2024-08-16 10:24:48 INFO  Log:20 - User is on Phone verification popup
+2024-08-16 10:24:48 INFO  Log:20 - User has entered verification code
+2024-08-16 10:24:50 INFO  Log:20 - User has exited Phone verification popup
+2024-08-16 10:24:51 INFO  Log:20 - User has selected offer on new offer page
