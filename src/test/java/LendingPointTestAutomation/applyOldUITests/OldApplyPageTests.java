@@ -12,11 +12,8 @@ import org.testng.annotations.Test;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
-import LendingPointTestAutomation.pageFactory.applyNewUI.ApplyPage;
-import LendingPointTestAutomation.pageFactory.applyOldUI.OldApplyPage;
-import LendingPointTestAutomation.pageFactory.applyOldUI.OldOfferPage;
-import LendingPointTestAutomation.pageFactory.applyOldUI.OldBankInformationPage;
-import LendingPointTestAutomation.pageFactory.applyOldUI.OldEmploymentPage;
+import LendingPointTestAutomation.pageFactory.applyNewUI.*;
+import LendingPointTestAutomation.pageFactory.applyOldUI.*;
 import LendingPointTestAutomation.utility.Log;
 
 public class OldApplyPageTests extends BaseClass{
@@ -24,7 +21,9 @@ public class OldApplyPageTests extends BaseClass{
 OldApplyPage oldApplyPage;
 OldOfferPage oldOfferPage;
 OldBankInformationPage oldBankInformationPage;
-OldEmploymentPage oldEmploymentPage;
+OldIncomeInformationPage oldIncomeInformationPage;
+OldIncomeInformationPage oldPaymentSetupPage;
+OldSignContractPage oldSignContractPage;
 
 	@BeforeClass (groups = {"Sanity","Smoke","APISmokeSuite"})
 	public void launchApplication() {
@@ -82,6 +81,7 @@ OldEmploymentPage oldEmploymentPage;
 		} else { 
 				Action.fluentWait(driver, oldOfferPage.chooseButton, 10);
 			oldBankInformationPage = oldOfferPage.clickChooseButton();
+			oldBankInformationPage = oldOfferPage.clickChooseButton();
 				Log.info("User has selected offer on old offer page");
 		}
 				Action.pageLoadTimeOut(driver, 30);
@@ -116,9 +116,32 @@ OldEmploymentPage oldEmploymentPage;
 				Action.fluentWait(driver, oldBankInformationPage.plaidSubmitButton, 10);
 		oldBankInformationPage.clickPlaidSubmitButton1();
 				Action.fluentWait(driver, oldBankInformationPage.plaidSubmitButton, 10);
-		oldEmploymentPage = oldBankInformationPage.clickPlaidSubmitButton2();
+		oldPaymentSetupPage = oldBankInformationPage.clickPlaidSubmitButton2();
 				Log.info("User has completed Plaid flow");
-				Action.fluentWait(driver, oldEmploymentPage.employmentPageTitle, 20);
+		driver.switchTo().defaultContent();
+				Action.fluentWait(driver, oldPaymentSetupPage.blockscreenHide, 20);
+				Action.fluentWait(driver, oldPaymentSetupPage.paymentSetupTab, 10);
+		if(Action.findElement(driver, oldPaymentSetupPage.paymentSetupTab) == true) {
+				Action.fluentWait(driver, oldPaymentSetupPage.achButton, 30);
+			oldSignContractPage = oldPaymentSetupPage.clickPaymentSetupNextButton();
+		} else {
+				Action.fluentWait(driver, oldIncomeInformationPage.employmentPageTitle, 20);
+			oldPaymentSetupPage = oldIncomeInformationPage;
+			oldIncomeInformationPage.enterEmployerName("ABC Corp");
+			oldIncomeInformationPage.enterEmployerPhone("9878978665");
+			oldIncomeInformationPage.enterWorkEmail("abc@lendingpoint.com");
+			oldIncomeInformationPage.enterJobTitle("Dev");
+			oldIncomeInformationPage.enterStartDate("02/29/2008");
+			oldPaymentSetupPage = oldIncomeInformationPage.clickEmploymentNextButton();
+				Action.pageLoadTimeOut(driver, 10);
+				Action.fluentWait(driver, oldPaymentSetupPage.achButton, 30);
+			oldSignContractPage = oldPaymentSetupPage.clickPaymentSetupNextButton();
+		}
+				Action.pageLoadTimeOut(driver, 10);
+				Action.fluentWait(driver, oldSignContractPage.amountFinancedTileTitle, 30);
+		oldSignContractPage.clickCheckBox1();
+		oldSignContractPage.clickCheckBox2();
+		oldSignContractPage.clickSignAgreementButton();
 	}
 
 }

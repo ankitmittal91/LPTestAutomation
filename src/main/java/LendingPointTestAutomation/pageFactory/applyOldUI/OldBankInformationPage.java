@@ -92,9 +92,9 @@ public class OldBankInformationPage extends BaseClass{
 		Action.click(driver, plaidSubmitButton);
 	}
 	
-	public OldEmploymentPage clickPlaidSubmitButton2() {
+	public OldIncomeInformationPage clickPlaidSubmitButton2() {
 		Action.click(driver, plaidSubmitButton);
-		return new OldEmploymentPage();
+		return new OldIncomeInformationPage();
 	}
 	
 	public void clickPlaidSavingAccountTile() {
