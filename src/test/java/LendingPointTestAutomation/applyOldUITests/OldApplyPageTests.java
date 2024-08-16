@@ -48,6 +48,14 @@ OldSignContractPage oldSignContractPage;
 		oldApplyPage.enterPhone("2127290858");
 				Action.fluentWait(driver, oldApplyPage.checkPhoneTick, 20);
 				Log.info("User has filled the form till phone number");
+		if(oldApplyPage.dobTextBox.getText() == "") {
+			oldApplyPage.enterDOB("02/28/1975");
+		}
+		if(oldApplyPage.phoneTextBox.getText() == "") {
+			oldApplyPage.enterPhone("2127290858");
+				Action.fluentWait(driver, oldApplyPage.checkPhoneTick, 20);
+				Log.info("User has filled the form till phone number");
+		}
 		oldApplyPage.enterEmail("kbisht@lendingpoint.com");
 				Action.fluentWait(driver, oldApplyPage.checkEmailTick, 20);
 		oldApplyPage.enterAddress1("222333 PEACHTREE PLACE");

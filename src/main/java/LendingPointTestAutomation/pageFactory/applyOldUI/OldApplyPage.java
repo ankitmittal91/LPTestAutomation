@@ -26,10 +26,10 @@ public class OldApplyPage extends BaseClass{
 	WebElement lastNameTextBox;
 	
 	@FindBy(xpath = "//input[@id='dob']")
-	WebElement dobTextBox;
+	public WebElement dobTextBox;
 	
 	@FindBy(xpath = "//input[@id='phone']")
-	WebElement phoneTextBox;
+	public WebElement phoneTextBox;
 	
 	@FindBy(xpath = "//input[@id='email']")
 	WebElement emailTextBox;
