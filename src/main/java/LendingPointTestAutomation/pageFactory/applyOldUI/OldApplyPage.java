@@ -82,7 +82,7 @@ public class OldApplyPage extends BaseClass{
 	
 	public void enterDOB(String dob) {
 		Action.click(driver, dobTextBox);
-		Action.type(dobTextBox, dob);
+		Action.enterTextByCharacter(dobTextBox, dob, 0);
 	}
 	
 	public void enterPhone(String phone) {

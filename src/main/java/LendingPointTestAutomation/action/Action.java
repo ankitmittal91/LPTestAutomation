@@ -751,8 +751,8 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	   // File source = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		TakesScreenshot takesScreenshot = (TakesScreenshot)driver;
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		//String destination = System.getProperty("user.dir") + "\\Screenshots\\" + filename + "_" + dateName + ".png";
-		String destination = "C:\\Users\\ankit.mittal\\eclipse-workspace\\LendingPointTestAutomation\\Screenshots\\" + filename + "_" + dateName + ".png";
+		String destination = System.getProperty("user.dir") + "\\Screenshots\\" + filename + "_" + dateName + ".png";
+		//String destination = "C:\\Users\\ankit.mittal\\eclipse-workspace\\LendingPointTestAutomation\\Screenshots\\" + filename + "_" + dateName + ".png";
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {

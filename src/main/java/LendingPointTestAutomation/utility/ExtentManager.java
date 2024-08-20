@@ -19,7 +19,7 @@ public class ExtentManager {
 	
 	extent.setSystemInfo("HostName", "MyHost");
 	extent.setSystemInfo("ProjectName", "LendingPoint");
-	extent.setSystemInfo("QA", "Kamal Singh Bisht");
+	extent.setSystemInfo("QA", "Ankit Mittal");
 	
 	extent.setSystemInfo("OS", "Win11");
 	extent.setSystemInfo("Browser", "Chrome");

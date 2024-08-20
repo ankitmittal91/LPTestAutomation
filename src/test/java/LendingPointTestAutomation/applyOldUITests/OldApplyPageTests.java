@@ -44,18 +44,10 @@ OldSignContractPage oldSignContractPage;
 		oldApplyPage.selectLoanPurpose("Unexpected Urgent Expense");
 		oldApplyPage.enterFirstName("John");
 		oldApplyPage.enterLastName("Smith");
-		oldApplyPage.enterDOB("02/28/1975");
+		oldApplyPage.enterDOB("02281975");
 		oldApplyPage.enterPhone("2127290858");
 				Action.fluentWait(driver, oldApplyPage.checkPhoneTick, 20);
 				Log.info("User has filled the form till phone number");
-		if(oldApplyPage.dobTextBox.getText() == "") {
-			oldApplyPage.enterDOB("02/28/1975");
-		}
-		if(oldApplyPage.phoneTextBox.getText() == "") {
-			oldApplyPage.enterPhone("2127290858");
-				Action.fluentWait(driver, oldApplyPage.checkPhoneTick, 20);
-				Log.info("User has filled the form till phone number");
-		}
 		oldApplyPage.enterEmail("kbisht@lendingpoint.com");
 				Action.fluentWait(driver, oldApplyPage.checkEmailTick, 20);
 		oldApplyPage.enterAddress1("222333 PEACHTREE PLACE");
@@ -126,7 +118,7 @@ OldSignContractPage oldSignContractPage;
 				Action.fluentWait(driver, oldBankInformationPage.plaidSubmitButton, 10);
 		oldPaymentSetupPage = oldBankInformationPage.clickPlaidSubmitButton2();
 				Log.info("User has completed Plaid flow");
-		driver.switchTo().defaultContent();
+		driver.switchTo().parentFrame();
 				Action.fluentWait(driver, oldPaymentSetupPage.blockscreenHide, 20);
 				Action.fluentWait(driver, oldPaymentSetupPage.paymentSetupTab, 10);
 		if(Action.findElement(driver, oldPaymentSetupPage.paymentSetupTab) == true) {
