@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class OldApplyPage extends BaseClass{
 	
 	public OldApplyPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@id='loanAmount']")
@@ -81,7 +81,7 @@ public class OldApplyPage extends BaseClass{
 	}
 	
 	public void enterDOB(String dob) {
-		Action.click(driver, dobTextBox);
+		Action.click(getDriver(), dobTextBox);
 		Action.enterTextByCharacter(dobTextBox, dob, 0);
 	}
 	
@@ -91,7 +91,7 @@ public class OldApplyPage extends BaseClass{
 	
 	public void enterEmail(String email) {
 		Action.type(emailTextBox, email);
-		Action.click(driver, address1TextBox);
+		Action.click(getDriver(), address1TextBox);
 	}
 	
 	public void enterAddress1(String address) {
@@ -103,7 +103,7 @@ public class OldApplyPage extends BaseClass{
 	}
 	
 	public void enterAnnualIncome(String annualIncome) {
-		Action.click(driver, annualIncomeTextBox);
+		Action.click(getDriver(), annualIncomeTextBox);
 		//annualIncomeTextBox.clear();
 		annualIncomeTextBox.sendKeys(annualIncome);
 	}
@@ -113,8 +113,8 @@ public class OldApplyPage extends BaseClass{
 	}
 	
 	public void enterSSN(String ssn) {
-		Action.moveToElement(driver, ssnTextBox);
-		Action.click(driver, ssnTextBox);
+		Action.moveToElement(getDriver(), ssnTextBox);
+		Action.click(getDriver(), ssnTextBox);
 		Action.type(ssnTextBox, ssn);
 	}
 	
@@ -123,7 +123,7 @@ public class OldApplyPage extends BaseClass{
 	}
 	
 	public OldOfferPage clickCheckMyOptionButton() {
-		Action.click(driver, checkMyOptionsButton);
+		Action.click(getDriver(), checkMyOptionsButton);
 		return new OldOfferPage();
 	}
 

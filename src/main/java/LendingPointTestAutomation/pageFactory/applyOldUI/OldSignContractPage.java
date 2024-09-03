@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class OldSignContractPage extends BaseClass{
 	
 	public OldSignContractPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//th[text()=\"Amount financed\"]")
@@ -26,17 +26,17 @@ public class OldSignContractPage extends BaseClass{
 	WebElement signAgreementButton;
 	
 	public void clickCheckBox1() {
-		Action.moveToElement(driver, checkBox1);
-		Action.click(driver, checkBox1);
+		Action.moveToElement(getDriver(), checkBox1);
+		Action.click(getDriver(), checkBox1);
 	}
 	
 	public void clickCheckBox2() {
-		Action.click(driver, checkBox2);
+		Action.click(getDriver(), checkBox2);
 	}
 	
 	public void clickSignAgreementButton() {
-		Action.moveToElement(driver, signAgreementButton);
-		Action.click(driver, signAgreementButton);
+		Action.moveToElement(getDriver(), signAgreementButton);
+		Action.click(getDriver(), signAgreementButton);
 	}
 
 }

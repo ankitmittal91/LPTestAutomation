@@ -5,16 +5,18 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
-import org.apache.log4j.xml.DOMConfigurator;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.utility.ExtentManager;
@@ -23,8 +25,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 
 public static Properties prop;
-public static WebDriver driver;
+//public static WebDriver driver;
 public static HashMap<String, String> requestParam = new HashMap<String, String>();
+
+private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+//protected static ThreadLocal<ExtentReports> extent = new ThreadLocal<>();
+
+	public static WebDriver getDriver() {
+		return driver.get();
+	}
 
 	@BeforeSuite (groups = {"Sanity","Smoke","APISmokeSuite"})
 	public static void loadConfig() throws IOException {
@@ -49,10 +58,13 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless");
 				options.addArguments("window-size=1920,1200");
-				driver = new ChromeDriver(options);
+				//driver = new ChromeDriver(options);
+				driver.set(new ChromeDriver(options));
 			} else {
-				driver = new ChromeDriver();
-				driver.manage().window().maximize();
+				//driver = new ChromeDriver();
+				//driver.manage().window().maximize();
+				driver.set(new ChromeDriver());
+				getDriver().manage().window().maximize();
 			}	
 		}
 		if(browserName.equalsIgnoreCase("Firefox")) {
@@ -61,26 +73,31 @@ public static HashMap<String, String> requestParam = new HashMap<String, String>
 				FirefoxOptions options = new FirefoxOptions();
 				options.addArguments("--headless");
 				options.addArguments("window-size=1920,1200");
-				driver = new FirefoxDriver(options);
+				//driver = new FirefoxDriver(options);
+				driver.set(new FirefoxDriver(options));
 			}else {
-				driver = new FirefoxDriver();
-				driver.manage().window().maximize();
+				//driver = new FirefoxDriver();
+				//driver.manage().window().maximize();
+				driver.set(new FirefoxDriver());
+				getDriver().manage().window().maximize();
 			}
 			
 		}
 		if(browserName.equalsIgnoreCase("IE")) {
 			WebDriverManager.iedriver().browserInDocker().setup();
-			driver = new InternetExplorerDriver();
-			driver.manage().window().maximize();
+			//driver = new InternetExplorerDriver();
+			//driver.manage().window().maximize();
+			driver.set(new InternetExplorerDriver());
+			getDriver().manage().window().maximize();
 		}
-		Action.pageLoadTimeOut(driver, 30);
-		driver.get(url);
-		Action.pageLoadTimeOut(driver, 30);
+		System.out.print(getDriver() + " ............................");
+		Action.pageLoadTimeOut(getDriver(), 30);
+		getDriver().get(url);
+		Action.pageLoadTimeOut(getDriver(), 30);
 	}
 	
 	@AfterSuite (groups = {"Sanity","Smoke","APISmokeSuite"})
 	public void afterSuite() {
-		ExtentManager.endReport();
-		
+		ExtentManager.endReport();	
 	}
 }

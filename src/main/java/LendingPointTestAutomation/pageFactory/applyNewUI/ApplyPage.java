@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class ApplyPage extends BaseClass {
 	
 	public ApplyPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='first-name-input']")
@@ -37,7 +37,7 @@ public class ApplyPage extends BaseClass {
 	}
 	
 	public void enterLoanAmount(String loanAmount) {
-		Action.click(driver, loanAmountTextBox);
+		Action.click(getDriver(), loanAmountTextBox);
 		loanAmountTextBox.clear();
 		Action.enterTextByCharacter(loanAmountTextBox, loanAmount, 0);
 	}
@@ -47,8 +47,8 @@ public class ApplyPage extends BaseClass {
 	}
 	
 	public ApplyDetailsContactInfoPage clickContinueButton() {
-		Action.fluentWait(driver, continueButton, 10);
-		Action.click(driver, continueButton);
+		Action.fluentWait(getDriver(), continueButton, 10);
+		Action.click(getDriver(), continueButton);
 		return new ApplyDetailsContactInfoPage();
 	}
 }

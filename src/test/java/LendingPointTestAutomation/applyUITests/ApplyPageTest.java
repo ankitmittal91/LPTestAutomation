@@ -25,51 +25,53 @@ connectDepositAccountPage connectDepositAccountPage;
 	public void launchApplication() {
 		launchBrowser(prop.getProperty("newApplyUIUrl"), prop.getProperty("browserType"));
 		applyPage = new ApplyPage();
-		Action.fluentWait(driver, applyPage.firstNameTextBox, 30);
+		Action.fluentWait(getDriver(), applyPage.firstNameTextBox, 30);
 	}
 
 	@AfterMethod (groups = {"Sanity","Smoke","APISmokeSuite"})
 	public void tearDown() {
-		driver.quit();
+		if(getDriver() != null) {
+			getDriver().quit();
+		}
 	}
 	
 	@Test (dataProvider = "userData", dataProviderClass = DataProviders.class , groups = {"Sanity","Smoke"})
-	public void fillApplyFormSuccess(String firstName, String lastName, String loanAmount, String mobilePhone, String email, String address, String city, String state, String zip, String annualIncome, String incomeType, String companyName, String dob, String ssn) throws InterruptedException {
+	public void newApplyFundingFlow(String firstName, String lastName, String loanAmount, String mobilePhone, String email, String address, String city, String state, String zip, String annualIncome, String incomeType, String companyName, String dob, String ssn) throws InterruptedException {
 			Log.startTestCase("User starts entering Personal Information");
 		applyPage.enterFirstName(firstName);
 		applyPage.enterLastName(lastName);
 		applyPage.enterLoanAmount(loanAmount);
 		applyPage.selectLoanPurpose();
 		applyDetailsContactInfoPage = applyPage.clickContinueButton();
-			Action.fluentWait(driver, applyDetailsContactInfoPage.mobilePhoneTextBox, 10);
+			Action.fluentWait(getDriver(), applyDetailsContactInfoPage.mobilePhoneTextBox, 10);
 		applyDetailsContactInfoPage.enterMobilePhone("7543074253");
 		applyDetailsContactInfoPage.enterEmail(email);
 		verifyPhone = applyDetailsContactInfoPage.clickContinueButton();
-			Action.fluentWait(driver, verifyPhone.codeTextBox1, 10);
+			Action.fluentWait(getDriver(), verifyPhone.codeTextBox1, 10);
 		verifyPhone.enterVerificationCode("123456");
 		incomeAddressFillPage = verifyPhone.clickVerifyButton();
-			Action.fluentWait(driver, incomeAddressFillPage.addressTextBox, 20);
+			Action.fluentWait(getDriver(), incomeAddressFillPage.addressTextBox, 20);
 		incomeAddressFillPage.enterAddress(address);
 		incomeAddressFillPage.enterCity(city);
 		incomeAddressFillPage.selectState(state);
 		incomeAddressFillPage.enterZip(zip);
 		yourIncomePage = incomeAddressFillPage.clickContinuetoIncomeButton();
-			Action.fluentWait(driver, yourIncomePage.annualIncomeTextBox, 10);
+			Action.fluentWait(getDriver(), yourIncomePage.annualIncomeTextBox, 10);
 		yourIncomePage.enterAnnualIncome(annualIncome);
 		yourIncomePage.selectIncomeType(incomeType);
-			Action.fluentWait(driver, yourIncomePage.companyNameTextBox, 10);
+			Action.fluentWait(getDriver(), yourIncomePage.companyNameTextBox, 10);
 		yourIncomePage.enterCompanyName(companyName);
 		aboutYouDOBSSNPage = yourIncomePage.clickContinueToAboutYouButton();
-			Action.fluentWait(driver, aboutYouDOBSSNPage.dobTextBox, 10);
+			Action.fluentWait(getDriver(), aboutYouDOBSSNPage.dobTextBox, 10);
 		aboutYouDOBSSNPage.enterDOB(dob);
 		aboutYouDOBSSNPage.enterSSN(ssn);
 		selectOfferPage = aboutYouDOBSSNPage.clickSeeOptionsButton();
-			driver.manage().timeouts().wait(30000);
-			Action.fluentWait(driver, selectOfferPage.congratulationsText, 60);
+			getDriver().manage().timeouts().wait(30000);
+			Action.fluentWait(getDriver(), selectOfferPage.congratulationsText, 60);
 		offerConfirmPage = selectOfferPage.clickConfirmOfferButton();
-			Action.fluentWait(driver, offerConfirmPage.offerConfirmedText, 60);
+			Action.fluentWait(getDriver(), offerConfirmPage.offerConfirmedText, 60);
 		connectDepositAccountPage = offerConfirmPage.clickLetsGoButton();
-			Action.fluentWait(driver, connectDepositAccountPage.connectDepositAccountText, 60);
+			Action.fluentWait(getDriver(), connectDepositAccountPage.connectDepositAccountText, 60);
 		connectDepositAccountPage.clickConnectBankButton();
 		Log.endTestCase("User finished entering Personal Information");
 	}

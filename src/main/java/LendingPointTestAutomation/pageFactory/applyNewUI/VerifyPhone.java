@@ -12,7 +12,7 @@ import LendingPointTestAutomation.utility.Log;
 public class VerifyPhone extends BaseClass{
 	
 	public VerifyPhone() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//div[@class='css-175oi2r r-1v1z2uz']//input")
@@ -29,12 +29,12 @@ public class VerifyPhone extends BaseClass{
 			String xpath = "//div[@class='css-175oi2r r-13hce6t r-1v1z2uz']["+i+"]//input";
 			c = code.charAt(i);
 			s = new StringBuilder().append(c).toString();
-			driver.findElement(By.xpath(xpath)).sendKeys(s);
+			getDriver().findElement(By.xpath(xpath)).sendKeys(s);
 		}
 	}
 	
 	public IncomeAddressFillPage clickVerifyButton() {
-		Action.click(driver, verifyButton);
+		Action.click(getDriver(), verifyButton);
 		return new IncomeAddressFillPage();
 	}
 }

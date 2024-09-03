@@ -11,7 +11,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class OldOfferPage extends BaseClass{
 	
 	public OldOfferPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//span[text()=\"SELECT OFFER\"]")
@@ -48,8 +48,8 @@ public class OldOfferPage extends BaseClass{
 	public WebElement blockscreen;
 	
 	public OldBankInformationPage clickChooseButton() {
-		//Action.moveToElement(driver, chooseButton);
-		Action.click(driver, chooseButton);
+		//Action.moveToElement(getDriver(), chooseButton);
+		Action.click(getDriver(), chooseButton);
 		return new OldBankInformationPage();
 	}
 	
@@ -58,12 +58,12 @@ public class OldOfferPage extends BaseClass{
 			String xpath = "(//input[@name='pin'])["+i+"]";
 			char c = verificationCode.charAt(i);
 			String s = new StringBuilder().append(c).toString();
-			driver.findElement(By.xpath(xpath)).sendKeys(s);
+			getDriver().findElement(By.xpath(xpath)).sendKeys(s);
 		}
 	}
 	
 	public void closeVerificationPopup() {
-		Action.click(driver, verificationPopupClose);
+		Action.click(getDriver(), verificationPopupClose);
 	}
 
 }

@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class YourIncomePage extends BaseClass{
 	
 	public YourIncomePage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath="//input[@data-testid='annual-individual-income-input']")
@@ -34,13 +34,13 @@ public class YourIncomePage extends BaseClass{
 	}
 	
 	public void enterCompanyName(String companyName) {
-		Action.moveToElement(driver, companyNameTextBox);
+		Action.moveToElement(getDriver(), companyNameTextBox);
 		Action.type(companyNameTextBox, companyName);
 	}
 	
 	public AboutYouDOBSSNPage clickContinueToAboutYouButton() {
-		Action.moveToElement(driver, continueToAboutYouButton);
-		Action.click(driver, continueToAboutYouButton);
+		Action.moveToElement(getDriver(), continueToAboutYouButton);
+		Action.click(getDriver(), continueToAboutYouButton);
 		return new AboutYouDOBSSNPage();
 	}
 

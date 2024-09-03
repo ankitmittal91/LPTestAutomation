@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class offerConfirmPage extends BaseClass {
 	
 	public offerConfirmPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//*[text()=\"Offer Confirmed\"]")
@@ -20,8 +20,8 @@ public class offerConfirmPage extends BaseClass {
 	WebElement letsGoButton;
 	
 	public connectDepositAccountPage clickLetsGoButton() {
-		Action.moveToElement(driver, letsGoButton);
-		Action.click(driver, letsGoButton);
+		Action.moveToElement(getDriver(), letsGoButton);
+		Action.click(getDriver(), letsGoButton);
 		return new connectDepositAccountPage();
 	}
 

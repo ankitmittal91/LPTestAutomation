@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class connectDepositAccountPage extends BaseClass {
 	
 	public connectDepositAccountPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//*[text()=\"Connect Deposit\"]")
@@ -20,7 +20,7 @@ public class connectDepositAccountPage extends BaseClass {
 	WebElement connectBankButton;
 	
 	public void clickConnectBankButton() {
-		Action.click(driver, connectBankButton);
+		Action.click(getDriver(), connectBankButton);
 	}
 
 }

@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class OldIncomeInformationPage extends BaseClass{
 	
 	public OldIncomeInformationPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//div[@class='blockscreen hide']")
@@ -53,8 +53,8 @@ public class OldIncomeInformationPage extends BaseClass{
 	WebElement paymentSetupNextButton;
 	
 	public OldSignContractPage clickPaymentSetupNextButton() {
-		Action.moveToElement(driver, paymentSetupNextButton);
-		Action.click(driver, paymentSetupNextButton);
+		Action.moveToElement(getDriver(), paymentSetupNextButton);
+		Action.click(getDriver(), paymentSetupNextButton);
 		return new OldSignContractPage();
 	}
 	
@@ -71,7 +71,7 @@ public class OldIncomeInformationPage extends BaseClass{
 	}
 	
 	public void enterJobTitle(String jobTitle) {
-		Action.moveToElement(driver, jobTitleTextBox);
+		Action.moveToElement(getDriver(), jobTitleTextBox);
 		Action.type(jobTitleTextBox, jobTitle);
 	}
 	
@@ -80,7 +80,7 @@ public class OldIncomeInformationPage extends BaseClass{
 	}
 	
 	public OldIncomeInformationPage clickEmploymentNextButton() {
-		Action.click(driver, employmentPageNextButton);
+		Action.click(getDriver(), employmentPageNextButton);
 		return new OldIncomeInformationPage();
 	}
 

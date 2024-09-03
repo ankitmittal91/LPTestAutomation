@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class AboutYouDOBSSNPage extends BaseClass{
 	
 	public AboutYouDOBSSNPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='about-you-birthday-input']")
@@ -23,18 +23,18 @@ public class AboutYouDOBSSNPage extends BaseClass{
 	WebElement seeOptionsButton;
 	
 	public void enterDOB(String dob) {
-		Action.click(driver, dobTextBox);
+		Action.click(getDriver(), dobTextBox);
 		Action.type(dobTextBox, dob);
 	}
 	
 	public void enterSSN(String ssn) {
-		Action.click(driver, ssnTextBox);
+		Action.click(getDriver(), ssnTextBox);
 		Action.enterTextByCharacter(ssnTextBox, ssn, 0);
 	}
 	
 	public selectOfferPage clickSeeOptionsButton() {
-		Action.moveToElement(driver, seeOptionsButton);
-		Action.click(driver, seeOptionsButton);
+		Action.moveToElement(getDriver(), seeOptionsButton);
+		Action.click(getDriver(), seeOptionsButton);
 		return new selectOfferPage();
 	}
 

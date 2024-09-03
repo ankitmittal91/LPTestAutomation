@@ -9,7 +9,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class ApplyDetailsContactInfoPage extends BaseClass {
 	
 	public ApplyDetailsContactInfoPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='mobile-phone-input']")
@@ -22,7 +22,7 @@ public class ApplyDetailsContactInfoPage extends BaseClass {
 	WebElement continueToVerificationButton;
 	
 	public void enterMobilePhone(String mobilePhone) {
-		Action.click(driver, mobilePhoneTextBox);
+		Action.click(getDriver(), mobilePhoneTextBox);
 		//mobilePhoneTextBox.clear();
 		Action.selectBySendkeys(mobilePhone, mobilePhoneTextBox);
 	}
@@ -32,8 +32,8 @@ public class ApplyDetailsContactInfoPage extends BaseClass {
 	}
 	
 	public VerifyPhone clickContinueButton() {
-		Action.fluentWait(driver, continueToVerificationButton, 10);
-		Action.click(driver, continueToVerificationButton);
+		Action.fluentWait(getDriver(), continueToVerificationButton, 10);
+		Action.click(getDriver(), continueToVerificationButton);
 		return new VerifyPhone();
 	}
 

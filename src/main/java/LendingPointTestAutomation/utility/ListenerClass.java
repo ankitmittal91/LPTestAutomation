@@ -1,9 +1,12 @@
 package LendingPointTestAutomation.utility;
 import java.io.IOException;
 
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
@@ -15,28 +18,29 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class ListenerClass extends ExtentManager implements ITestListener {
 
 	Action action= new Action();
+	private static ThreadLocal<ExtentTest> extent_test = new ThreadLocal<ExtentTest>();
 	
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getName());
+		test = extent.createTest(result.getMethod().getMethodName());
+		extent_test.set(test);
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
-			test.log(Status.PASS, "Pass Test case is: " + result.getName());
+			extent_test.get().log(Status.PASS, "Pass Test case is: " + result.getMethod().getMethodName());
 		}
 	}
 
-	
 	public void onTestFailure(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			try {
-				test.log(Status.FAIL,
-						MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-				test.log(Status.FAIL,
+				extent_test.get().log(Status.FAIL,
+						MarkupHelper.createLabel(result.getMethod().getMethodName() + " - Test Case Failed", ExtentColor.RED));
+				extent_test.get().log(Status.FAIL,
 						MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-				String imgPath = action.screenShot(BaseClass.driver, result.getName());
+				String imgPath = action.screenShot(BaseClass.getDriver(), result.getMethod().getMethodName());
 			
-				test.fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+				extent_test.get().fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -47,12 +51,16 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		if (result.getStatus() == ITestResult.SKIP) {
-			test.log(Status.SKIP, "Skipped Test case is: " + result.getName());
+			extent_test.get().log(Status.SKIP, "Skipped Test case is: " + result.getMethod().getMethodName());
 		}
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
+	}
+	
+	public void onFinish(ITestContext context) {
+		
 	}
 
 }

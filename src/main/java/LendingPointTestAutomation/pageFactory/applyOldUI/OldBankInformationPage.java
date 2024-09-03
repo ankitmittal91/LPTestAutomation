@@ -10,7 +10,7 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class OldBankInformationPage extends BaseClass{
 	
 	public OldBankInformationPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//li[@step-name='offers'][@class='step done']")
@@ -59,13 +59,13 @@ public class OldBankInformationPage extends BaseClass{
 	public WebElement plaidSavingAccountTile;
 	
 	public OldBankInformationPage clickConnectPlaidButton() {
-		Action.click(driver, connectPlaidButton);
+		Action.click(getDriver(), connectPlaidButton);
 		return new OldBankInformationPage();
 	}
 	
 	public void clickContinuePlaidButton() {
-		Action.moveToElement(driver, plaidContinueButton);
-		Action.click(driver, plaidContinueButton);
+		Action.moveToElement(getDriver(), plaidContinueButton);
+		Action.click(getDriver(), plaidContinueButton);
 	}
 	
 	public void searchPlaidBank(String bankName) {
@@ -73,11 +73,11 @@ public class OldBankInformationPage extends BaseClass{
 	}
 	
 	public void selectPlaidBank1() {
-		Action.click(driver, plaidSearchResultTile1);
+		Action.click(getDriver(), plaidSearchResultTile1);
 	}
 	
 	public void selectPlaidBank2() {
-		Action.click(driver, plaidSearchResultTile2);
+		Action.click(getDriver(), plaidSearchResultTile2);
 	}
 	
 	public void enterPlaidUsername(String plaidUsername) {
@@ -89,16 +89,16 @@ public class OldBankInformationPage extends BaseClass{
 	}
 	
 	public void clickPlaidSubmitButton1() {
-		Action.click(driver, plaidSubmitButton);
+		Action.click(getDriver(), plaidSubmitButton);
 	}
 	
 	public OldIncomeInformationPage clickPlaidSubmitButton2() {
-		Action.click(driver, plaidSubmitButton);
+		Action.click(getDriver(), plaidSubmitButton);
 		return new OldIncomeInformationPage();
 	}
 	
 	public void clickPlaidSavingAccountTile() {
-		Action.click(driver, plaidSavingAccountTile);
+		Action.click(getDriver(), plaidSavingAccountTile);
 	}
 
 }
