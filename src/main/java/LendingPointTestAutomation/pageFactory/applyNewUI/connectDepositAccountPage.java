@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class connectDepositAccountPage extends BaseClass {
 	
 	public connectDepositAccountPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//*[text()=\"Connect Deposit\"]")
@@ -20,7 +21,7 @@ public class connectDepositAccountPage extends BaseClass {
 	WebElement connectBankButton;
 	
 	public void clickConnectBankButton() {
-		Action.click(getDriver(), connectBankButton);
+		Action.click(connectBankButton);
 	}
 
 }

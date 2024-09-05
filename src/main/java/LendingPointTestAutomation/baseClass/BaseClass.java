@@ -15,30 +15,30 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
-import com.aventstack.extentreports.ExtentReports;
-
-import LendingPointTestAutomation.action.Action;
-import LendingPointTestAutomation.utility.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import LendingPointTestAutomation.action.Action;
+import LendingPointTestAutomation.utility.DriverFactory;
+import LendingPointTestAutomation.utility.ExtentFactory;
+import LendingPointTestAutomation.utility.ExtentManager;
+import LendingPointTestAutomation.utility.BrowserFactory;
+
 
 public class BaseClass {
 
 public static Properties prop;
-//public static WebDriver driver;
 public static HashMap<String, String> requestParam = new HashMap<String, String>();
+//private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-//protected static ThreadLocal<ExtentReports> extent = new ThreadLocal<>();
-
-	public static WebDriver getDriver() {
-		return driver.get();
-	}
+	//public static WebDriver getDriver() {
+		//return driver.get();
+	//}
 
 	@BeforeSuite (groups = {"Sanity","Smoke","APISmokeSuite"})
 	public static void loadConfig() throws IOException {
 		DOMConfigurator.configure("log4j.xml");
-		ExtentManager.setExtent();
+		ExtentManager.setReport();
+		//ExtentManager report = new ExtentManager();
+		//ExtentFactory.getInstance().setExtent(report.setReport());
 		try {
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/configurationFile.properties");
 		prop = new Properties();
@@ -50,7 +50,7 @@ private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 		}
 	}
 	
-	public static void launchBrowser(String url, String browserType) {
+	public static void launchBrowser1(String url, String browserType) {
 		String browserName = prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().browserInDocker().setup();
@@ -59,12 +59,12 @@ private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 				options.addArguments("--headless");
 				options.addArguments("window-size=1920,1200");
 				//driver = new ChromeDriver(options);
-				driver.set(new ChromeDriver(options));
+				//driver.set(new ChromeDriver(options));
 			} else {
 				//driver = new ChromeDriver();
 				//driver.manage().window().maximize();
-				driver.set(new ChromeDriver());
-				getDriver().manage().window().maximize();
+				//driver.set(new ChromeDriver());
+				//getDriver().manage().window().maximize();
 			}	
 		}
 		if(browserName.equalsIgnoreCase("Firefox")) {
@@ -74,12 +74,12 @@ private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 				options.addArguments("--headless");
 				options.addArguments("window-size=1920,1200");
 				//driver = new FirefoxDriver(options);
-				driver.set(new FirefoxDriver(options));
+				//driver.set(new FirefoxDriver(options));
 			}else {
 				//driver = new FirefoxDriver();
 				//driver.manage().window().maximize();
-				driver.set(new FirefoxDriver());
-				getDriver().manage().window().maximize();
+				//driver.set(new FirefoxDriver());
+				//getDriver().manage().window().maximize();
 			}
 			
 		}
@@ -87,17 +87,28 @@ private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 			WebDriverManager.iedriver().browserInDocker().setup();
 			//driver = new InternetExplorerDriver();
 			//driver.manage().window().maximize();
-			driver.set(new InternetExplorerDriver());
-			getDriver().manage().window().maximize();
+			//driver.set(new InternetExplorerDriver());
+			//getDriver().manage().window().maximize();
 		}
-		System.out.print(getDriver() + " ............................");
-		Action.pageLoadTimeOut(getDriver(), 30);
-		getDriver().get(url);
-		Action.pageLoadTimeOut(getDriver(), 30);
+		//System.out.print(getDriver() + " ............................");
+		//Action.pageLoadTimeOut(getDriver(), 30);
+		//getDriver().get(url);
+		//Action.pageLoadTimeOut(getDriver(), 30);
+	}
+	
+	public static void launchBrowser(String url) {
+		BrowserFactory bf = new BrowserFactory();
+		String browserName = prop.getProperty("browser");
+		String browserType = prop.getProperty("browserType");
+		DriverFactory.getInstance().setDriver(bf.createBrowserInstance(browserName, browserType));
+		DriverFactory.getInstance().getDriver().manage().window().maximize();
+		Action.pageLoadTimeOut(30);
+		DriverFactory.getInstance().getDriver().get(url);
+		Action.pageLoadTimeOut(30);
 	}
 	
 	@AfterSuite (groups = {"Sanity","Smoke","APISmokeSuite"})
 	public void afterSuite() {
-		ExtentManager.endReport();	
+		ExtentManager.endReport();
 	}
 }

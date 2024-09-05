@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class AboutYouDOBSSNPage extends BaseClass{
 	
 	public AboutYouDOBSSNPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='about-you-birthday-input']")
@@ -23,18 +24,18 @@ public class AboutYouDOBSSNPage extends BaseClass{
 	WebElement seeOptionsButton;
 	
 	public void enterDOB(String dob) {
-		Action.click(getDriver(), dobTextBox);
+		Action.click(dobTextBox);
 		Action.type(dobTextBox, dob);
 	}
 	
 	public void enterSSN(String ssn) {
-		Action.click(getDriver(), ssnTextBox);
+		Action.click(ssnTextBox);
 		Action.enterTextByCharacter(ssnTextBox, ssn, 0);
 	}
 	
 	public selectOfferPage clickSeeOptionsButton() {
-		Action.moveToElement(getDriver(), seeOptionsButton);
-		Action.click(getDriver(), seeOptionsButton);
+		Action.moveToElement(seeOptionsButton);
+		Action.click(seeOptionsButton);
 		return new selectOfferPage();
 	}
 

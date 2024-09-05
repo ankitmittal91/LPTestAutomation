@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class OldSignContractPage extends BaseClass{
 	
 	public OldSignContractPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//th[text()=\"Amount financed\"]")
@@ -26,17 +27,17 @@ public class OldSignContractPage extends BaseClass{
 	WebElement signAgreementButton;
 	
 	public void clickCheckBox1() {
-		Action.moveToElement(getDriver(), checkBox1);
-		Action.click(getDriver(), checkBox1);
+		Action.moveToElement(checkBox1);
+		Action.click(checkBox1);
 	}
 	
 	public void clickCheckBox2() {
-		Action.click(getDriver(), checkBox2);
+		Action.click(checkBox2);
 	}
 	
 	public void clickSignAgreementButton() {
-		Action.moveToElement(getDriver(), signAgreementButton);
-		Action.click(getDriver(), signAgreementButton);
+		Action.moveToElement(signAgreementButton);
+		Action.click(signAgreementButton);
 	}
 
 }

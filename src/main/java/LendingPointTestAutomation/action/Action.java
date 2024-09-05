@@ -27,6 +27,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import LendingPointTestAutomation.utility.DriverFactory;
+
 
 public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	
@@ -44,8 +46,8 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 		js.executeScript("arguments[0].scrollIntoView();", ele);
 	}
 
-	public static void click(WebDriver driver, WebElement ele) {
-		Actions act = new Actions(driver);
+	public static void click(WebElement ele) {
+		Actions act = new Actions(DriverFactory.getInstance().getDriver());
 		act.moveToElement(ele).click().build().perform();
 	}
 	
@@ -76,9 +78,9 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	}
 
 	
-	public static boolean isDisplayed(WebDriver driver, WebElement ele) {
+	public static boolean isDisplayed(WebElement ele) {
 		boolean flag = false;
-		flag = findElement(driver, ele);
+		flag = findElement(DriverFactory.getInstance().getDriver(), ele);
 		if (flag) {
 			flag = ele.isDisplayed();
 			if (flag) {
@@ -257,7 +259,7 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 			String javaScript = "var evObj = document.createEvent('MouseEvents');"
 					+ "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
 					+ "arguments[0].dispatchEvent(evObj);";
-			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getInstance().getDriver();
 			js.executeScript(javaScript, mo);
 			flag = true;
 			return true;
@@ -382,13 +384,13 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	}
 
 	
-	public static boolean moveToElement(WebDriver driver, WebElement ele) {
+	public static boolean moveToElement(WebElement ele) {
 		boolean flag = false;
 		try {
 			// WebElement element = driver.findElement(locator);
-			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			JavascriptExecutor executor = (JavascriptExecutor) DriverFactory.getInstance().getDriver();
 			executor.executeScript("arguments[0].scrollIntoView(true);", ele);
-			Actions actions = new Actions(driver);
+			Actions actions = new Actions(DriverFactory.getInstance().getDriver());
 			// actions.moveToElement(driver.findElement(locator)).build().perform();
 			actions.moveToElement(ele).build().perform();
 			flag = true;
@@ -706,10 +708,10 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	}
 	
 	
-	public static void fluentWait(WebDriver driver,WebElement element, int timeOut) {
+	public static void fluentWait(WebElement element, int timeOut) {
 	    Wait<WebDriver> wait = null;
 	    try {
-	        wait = new FluentWait<WebDriver>((WebDriver) driver)
+	        wait = new FluentWait<WebDriver>((WebDriver) DriverFactory.getInstance().getDriver())
 	        		.withTimeout(Duration.ofSeconds(20))
 	        	    .pollingEvery(Duration.ofSeconds(2))
 	        	    .ignoring(Exception.class);
@@ -718,10 +720,10 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	    }
 	}
 	
-	public static void fluentWaitTillExists(WebDriver driver,WebElement element, int timeOut) {
+	public static void fluentWaitTillExists(WebElement element, int timeOut) {
 	    Wait<WebDriver> wait = null;
 	    try {
-	        wait = new FluentWait<WebDriver>((WebDriver) driver)
+	        wait = new FluentWait<WebDriver>((WebDriver) DriverFactory.getInstance().getDriver())
 	        		.withTimeout(Duration.ofSeconds(20))
 	        	    .pollingEvery(Duration.ofSeconds(2))
 	        	    .ignoring(NoSuchElementException.class);
@@ -741,8 +743,8 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static void pageLoadTimeOut(WebDriver driver, int timeOut) {
-		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
+	public static void pageLoadTimeOut(int timeOut) {
+		DriverFactory.getInstance().getDriver().manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
 	}
 	
 	public String screenShot(WebDriver driver, String filename) {
@@ -761,7 +763,7 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 		// This new path for jenkins
 		String newImageString = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
 				+ dateName + ".png";
-		return newImageString;
+		return destination;
 	}
 	
 	public String getCurrentTime() {

@@ -21,8 +21,8 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 	private static ThreadLocal<ExtentTest> extent_test = new ThreadLocal<ExtentTest>();
 	
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getMethod().getMethodName());
-		extent_test.set(test);
+		extent_test.set(extent.createTest(result.getMethod().getMethodName())); 
+		//extent_test.set(test);
 	}
 
 	public void onTestSuccess(ITestResult result) {
@@ -38,8 +38,8 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 						MarkupHelper.createLabel(result.getMethod().getMethodName() + " - Test Case Failed", ExtentColor.RED));
 				extent_test.get().log(Status.FAIL,
 						MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-				String imgPath = action.screenShot(BaseClass.getDriver(), result.getMethod().getMethodName());
-			
+				String imgPath = action.screenShot(DriverFactory.getInstance().getDriver(), result.getMethod().getMethodName());
+				//extent_test.get().addScreenCaptureFromPath(imgPath);
 				extent_test.get().fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
 				
 			} catch (IOException e) {

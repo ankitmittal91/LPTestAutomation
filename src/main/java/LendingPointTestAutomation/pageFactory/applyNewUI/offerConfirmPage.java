@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class offerConfirmPage extends BaseClass {
 	
 	public offerConfirmPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//*[text()=\"Offer Confirmed\"]")
@@ -20,8 +21,8 @@ public class offerConfirmPage extends BaseClass {
 	WebElement letsGoButton;
 	
 	public connectDepositAccountPage clickLetsGoButton() {
-		Action.moveToElement(getDriver(), letsGoButton);
-		Action.click(getDriver(), letsGoButton);
+		Action.moveToElement(letsGoButton);
+		Action.click(letsGoButton);
 		return new connectDepositAccountPage();
 	}
 

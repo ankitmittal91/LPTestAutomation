@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class IncomeAddressFillPage extends BaseClass {
 	
 	public IncomeAddressFillPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='fill-address-input']")
@@ -29,12 +30,12 @@ public class IncomeAddressFillPage extends BaseClass {
 	WebElement continueToIncomeButton;
 	
 	public void enterAddress(String address) {
-		Action.click(getDriver(), addressTextBox);
+		Action.click(addressTextBox);
 		Action.type(addressTextBox, address);
 	}
 	
 	public void enterCity(String city) {
-		Action.click(getDriver(), cityTextBox);
+		Action.click(cityTextBox);
 		Action.type(cityTextBox, city);
 	}
 	
@@ -43,12 +44,12 @@ public class IncomeAddressFillPage extends BaseClass {
 	}
 	
 	public void enterZip(String zip) {
-		Action.click(getDriver(), zipTextBox);
+		Action.click(zipTextBox);
 		Action.type(zipTextBox, zip);
 	}
 	
 	public YourIncomePage clickContinuetoIncomeButton() {
-		Action.click(getDriver(), continueToIncomeButton);
+		Action.click(continueToIncomeButton);
 		return new YourIncomePage();
 	}
 

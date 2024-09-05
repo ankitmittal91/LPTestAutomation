@@ -7,8 +7,8 @@
         <methods>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
+          <include name="oldApplyFundingFlow"/>
           <include name="tearDown"/>
-          <include name="fillApplyFormSuccess"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- LendingPointTestAutomation.applyOldUITests.OldApplyPageTests -->

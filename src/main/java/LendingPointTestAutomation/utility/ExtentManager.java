@@ -8,9 +8,9 @@ public class ExtentManager {
 	
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
-	public static ExtentTest test;
+	//public static ExtentTest test;
 	
-	public static ExtentReports setExtent() {
+	public static ExtentReports setReport() {
 	htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport.html");
 	htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"/extentReport_config.xml");
 	

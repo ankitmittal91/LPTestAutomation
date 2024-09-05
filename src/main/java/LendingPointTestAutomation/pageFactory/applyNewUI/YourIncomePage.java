@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class YourIncomePage extends BaseClass{
 	
 	public YourIncomePage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath="//input[@data-testid='annual-individual-income-input']")
@@ -34,13 +35,13 @@ public class YourIncomePage extends BaseClass{
 	}
 	
 	public void enterCompanyName(String companyName) {
-		Action.moveToElement(getDriver(), companyNameTextBox);
+		Action.moveToElement(companyNameTextBox);
 		Action.type(companyNameTextBox, companyName);
 	}
 	
 	public AboutYouDOBSSNPage clickContinueToAboutYouButton() {
-		Action.moveToElement(getDriver(), continueToAboutYouButton);
-		Action.click(getDriver(), continueToAboutYouButton);
+		Action.moveToElement(continueToAboutYouButton);
+		Action.click(continueToAboutYouButton);
 		return new AboutYouDOBSSNPage();
 	}
 

@@ -7,11 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class OldOfferPage extends BaseClass{
 	
 	public OldOfferPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//span[text()=\"SELECT OFFER\"]")
@@ -49,7 +50,7 @@ public class OldOfferPage extends BaseClass{
 	
 	public OldBankInformationPage clickChooseButton() {
 		//Action.moveToElement(getDriver(), chooseButton);
-		Action.click(getDriver(), chooseButton);
+		Action.click(chooseButton);
 		return new OldBankInformationPage();
 	}
 	
@@ -58,12 +59,12 @@ public class OldOfferPage extends BaseClass{
 			String xpath = "(//input[@name='pin'])["+i+"]";
 			char c = verificationCode.charAt(i);
 			String s = new StringBuilder().append(c).toString();
-			getDriver().findElement(By.xpath(xpath)).sendKeys(s);
+			DriverFactory.getInstance().getDriver().findElement(By.xpath(xpath)).sendKeys(s);
 		}
 	}
 	
 	public void closeVerificationPopup() {
-		Action.click(getDriver(), verificationPopupClose);
+		Action.click(verificationPopupClose);
 	}
 
 }

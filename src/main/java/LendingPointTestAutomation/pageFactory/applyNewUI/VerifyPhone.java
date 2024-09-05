@@ -7,12 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 import LendingPointTestAutomation.utility.Log;
 
 public class VerifyPhone extends BaseClass{
 	
 	public VerifyPhone() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//div[@class='css-175oi2r r-1v1z2uz']//input")
@@ -29,12 +30,12 @@ public class VerifyPhone extends BaseClass{
 			String xpath = "//div[@class='css-175oi2r r-13hce6t r-1v1z2uz']["+i+"]//input";
 			c = code.charAt(i);
 			s = new StringBuilder().append(c).toString();
-			getDriver().findElement(By.xpath(xpath)).sendKeys(s);
+			DriverFactory.getInstance().getDriver().findElement(By.xpath(xpath)).sendKeys(s);
 		}
 	}
 	
 	public IncomeAddressFillPage clickVerifyButton() {
-		Action.click(getDriver(), verifyButton);
+		Action.click(verifyButton);
 		return new IncomeAddressFillPage();
 	}
 }

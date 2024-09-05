@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class ApplyPage extends BaseClass {
 	
 	public ApplyPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='first-name-input']")
@@ -37,7 +38,7 @@ public class ApplyPage extends BaseClass {
 	}
 	
 	public void enterLoanAmount(String loanAmount) {
-		Action.click(getDriver(), loanAmountTextBox);
+		Action.click(loanAmountTextBox);
 		loanAmountTextBox.clear();
 		Action.enterTextByCharacter(loanAmountTextBox, loanAmount, 0);
 	}
@@ -47,8 +48,8 @@ public class ApplyPage extends BaseClass {
 	}
 	
 	public ApplyDetailsContactInfoPage clickContinueButton() {
-		Action.fluentWait(getDriver(), continueButton, 10);
-		Action.click(getDriver(), continueButton);
+		Action.fluentWait(continueButton, 10);
+		Action.click(continueButton);
 		return new ApplyDetailsContactInfoPage();
 	}
 }

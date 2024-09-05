@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class OldIncomeInformationPage extends BaseClass{
 	
 	public OldIncomeInformationPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//div[@class='blockscreen hide']")
@@ -53,8 +54,8 @@ public class OldIncomeInformationPage extends BaseClass{
 	WebElement paymentSetupNextButton;
 	
 	public OldSignContractPage clickPaymentSetupNextButton() {
-		Action.moveToElement(getDriver(), paymentSetupNextButton);
-		Action.click(getDriver(), paymentSetupNextButton);
+		Action.moveToElement(paymentSetupNextButton);
+		Action.click(paymentSetupNextButton);
 		return new OldSignContractPage();
 	}
 	
@@ -71,7 +72,7 @@ public class OldIncomeInformationPage extends BaseClass{
 	}
 	
 	public void enterJobTitle(String jobTitle) {
-		Action.moveToElement(getDriver(), jobTitleTextBox);
+		Action.moveToElement(jobTitleTextBox);
 		Action.type(jobTitleTextBox, jobTitle);
 	}
 	
@@ -80,7 +81,7 @@ public class OldIncomeInformationPage extends BaseClass{
 	}
 	
 	public OldIncomeInformationPage clickEmploymentNextButton() {
-		Action.click(getDriver(), employmentPageNextButton);
+		Action.click(employmentPageNextButton);
 		return new OldIncomeInformationPage();
 	}
 

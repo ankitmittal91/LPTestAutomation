@@ -6,11 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class OldBankInformationPage extends BaseClass{
 	
 	public OldBankInformationPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//li[@step-name='offers'][@class='step done']")
@@ -59,13 +60,13 @@ public class OldBankInformationPage extends BaseClass{
 	public WebElement plaidSavingAccountTile;
 	
 	public OldBankInformationPage clickConnectPlaidButton() {
-		Action.click(getDriver(), connectPlaidButton);
+		Action.click(connectPlaidButton);
 		return new OldBankInformationPage();
 	}
 	
 	public void clickContinuePlaidButton() {
-		Action.moveToElement(getDriver(), plaidContinueButton);
-		Action.click(getDriver(), plaidContinueButton);
+		Action.moveToElement(plaidContinueButton);
+		Action.click(plaidContinueButton);
 	}
 	
 	public void searchPlaidBank(String bankName) {
@@ -73,11 +74,11 @@ public class OldBankInformationPage extends BaseClass{
 	}
 	
 	public void selectPlaidBank1() {
-		Action.click(getDriver(), plaidSearchResultTile1);
+		Action.click(plaidSearchResultTile1);
 	}
 	
 	public void selectPlaidBank2() {
-		Action.click(getDriver(), plaidSearchResultTile2);
+		Action.click(plaidSearchResultTile2);
 	}
 	
 	public void enterPlaidUsername(String plaidUsername) {
@@ -89,16 +90,16 @@ public class OldBankInformationPage extends BaseClass{
 	}
 	
 	public void clickPlaidSubmitButton1() {
-		Action.click(getDriver(), plaidSubmitButton);
+		Action.click(plaidSubmitButton);
 	}
 	
 	public OldIncomeInformationPage clickPlaidSubmitButton2() {
-		Action.click(getDriver(), plaidSubmitButton);
+		Action.click(plaidSubmitButton);
 		return new OldIncomeInformationPage();
 	}
 	
 	public void clickPlaidSavingAccountTile() {
-		Action.click(getDriver(), plaidSavingAccountTile);
+		Action.click(plaidSavingAccountTile);
 	}
 
 }

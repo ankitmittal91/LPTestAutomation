@@ -5,11 +5,12 @@ import org.openqa.selenium.support.*;
 
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
+import LendingPointTestAutomation.utility.DriverFactory;
 
 public class ApplyDetailsContactInfoPage extends BaseClass {
 	
 	public ApplyDetailsContactInfoPage() {
-		PageFactory.initElements(getDriver(), this);
+		PageFactory.initElements(DriverFactory.getInstance().getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@data-testid='mobile-phone-input']")
@@ -22,7 +23,7 @@ public class ApplyDetailsContactInfoPage extends BaseClass {
 	WebElement continueToVerificationButton;
 	
 	public void enterMobilePhone(String mobilePhone) {
-		Action.click(getDriver(), mobilePhoneTextBox);
+		Action.click(mobilePhoneTextBox);
 		//mobilePhoneTextBox.clear();
 		Action.selectBySendkeys(mobilePhone, mobilePhoneTextBox);
 	}
@@ -32,8 +33,8 @@ public class ApplyDetailsContactInfoPage extends BaseClass {
 	}
 	
 	public VerifyPhone clickContinueButton() {
-		Action.fluentWait(getDriver(), continueToVerificationButton, 10);
-		Action.click(getDriver(), continueToVerificationButton);
+		Action.fluentWait(continueToVerificationButton, 10);
+		Action.click(continueToVerificationButton);
 		return new VerifyPhone();
 	}
 

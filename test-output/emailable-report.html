@@ -9,12 +9,12 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Chrome_Browser_Suite</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">85,085</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Chrome_Browser_Suite</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">82,503</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome_Browser_Suite &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">LendingPointTestAutomation.applyOldUITests.OldApplyPageTests</td><td><a href="#m0">oldApplyFundingFlow</a></td><td rowspan="1">1725361040369</td><td rowspan="1">73056</td></tr><tr class="failedodd"><td rowspan="1">LendingPointTestAutomation.applyUITests.ApplyPageTest</td><td><a href="#m1">newApplyFundingFlow</a></td><td rowspan="1">1725361051953</td><td rowspan="1">34651</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome_Browser_Suite &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">LendingPointTestAutomation.applyOldUITests.OldApplyPageTests</td><td><a href="#m0">oldApplyFundingFlow</a></td><td rowspan="1">1725518108673</td><td rowspan="1">71195</td></tr><tr class="failedodd"><td rowspan="1">LendingPointTestAutomation.applyUITests.ApplyPageTest</td><td><a href="#m1">newApplyFundingFlow</a></td><td rowspan="1">1725518121845</td><td rowspan="1">32694</td></tr></tbody>
 </table>
 <h2>Chrome_Browser_Suite</h2><h3 id="m0">LendingPointTestAutomation.applyOldUITests.OldApplyPageTests#oldApplyFundingFlow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at LendingPointTestAutomation.applyOldUITests.OldApplyPageTests.oldApplyFundingFlow(OldApplyPageTests.java:68)
+	at LendingPointTestAutomation.applyOldUITests.OldApplyPageTests.oldApplyFundingFlow(OldApplyPageTests.java:69)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
@@ -23,9 +23,9 @@
 Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1515fa215edfa4e53de829efccf95f3d, actions {actions=[org.openqa.selenium.interactions.Sequence@536056ec]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53387/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1515fa215edfa4e53de829efccf95f3d
+Command: [673c05b79da5434e6a7b1caf4630e991, actions {actions=[org.openqa.selenium.interactions.Sequence@55af4765]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 673c05b79da5434e6a7b1caf4630e991
 	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:520)
 	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:182)
 	at org.openqa.selenium.json.JsonOutput.write0(JsonOutput.java:409)
@@ -57,9 +57,9 @@ Session ID: 1515fa215edfa4e53de829efccf95f3d
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
 	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:613)
 	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:613)
-	at LendingPointTestAutomation.action.Action.click(Action.java:49)
-	at LendingPointTestAutomation.pageFactory.applyNewUI.IncomeAddressFillPage.enterAddress(IncomeAddressFillPage.java:32)
-	at LendingPointTestAutomation.applyUITests.ApplyPageTest.newApplyFundingFlow(ApplyPageTest.java:54)
+	at LendingPointTestAutomation.action.Action.click(Action.java:51)
+	at LendingPointTestAutomation.pageFactory.applyNewUI.IncomeAddressFillPage.enterAddress(IncomeAddressFillPage.java:33)
+	at LendingPointTestAutomation.applyUITests.ApplyPageTest.newApplyFundingFlow(ApplyPageTest.java:55)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
@@ -78,9 +78,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1515fa215edfa4e53de829efccf95f3d, findElement {using=xpath, value=//input[@data-testid=&apos;fill-address-input&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53387/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1515fa215edfa4e53de829efccf95f3d
+Command: [673c05b79da5434e6a7b1caf4630e991, findElement {value=//input[@data-testid=&apos;fill-address-input&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 673c05b79da5434e6a7b1caf4630e991
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)

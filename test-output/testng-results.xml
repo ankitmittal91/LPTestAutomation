@@ -2,23 +2,23 @@
 <testng-results ignored="2" total="4" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-03T16:27:08 IST" name="Suite" finished-at="2024-09-03T16:28:33 IST" duration-ms="85085">
+  <suite started-at="2024-09-05T12:04:57 IST" name="Suite" finished-at="2024-09-05T12:06:20 IST" duration-ms="82503">
     <groups>
       <group name="Sanity">
-        <method signature="ApplyPageTest.newApplyFundingFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" name="newApplyFundingFlow" class="LendingPointTestAutomation.applyUITests.ApplyPageTest"/>
+        <method signature="ApplyPageTest.newApplyFundingFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" name="newApplyFundingFlow" class="LendingPointTestAutomation.applyUITests.ApplyPageTest"/>
       </group> <!-- Sanity -->
       <group name="Smoke">
-        <method signature="ApplyPageTest.newApplyFundingFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" name="newApplyFundingFlow" class="LendingPointTestAutomation.applyUITests.ApplyPageTest"/>
-        <method signature="OldApplyPageTests.oldApplyFundingFlow()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@a1153bc]" name="oldApplyFundingFlow" class="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests"/>
+        <method signature="ApplyPageTest.newApplyFundingFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" name="newApplyFundingFlow" class="LendingPointTestAutomation.applyUITests.ApplyPageTest"/>
+        <method signature="OldApplyPageTests.oldApplyFundingFlow()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@4c583ecf]" name="oldApplyFundingFlow" class="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-09-03T16:27:08 IST" name="Chrome_Browser_Suite" finished-at="2024-09-03T16:28:33 IST" duration-ms="85085">
+    <test started-at="2024-09-05T12:04:57 IST" name="Chrome_Browser_Suite" finished-at="2024-09-05T12:06:20 IST" duration-ms="82503">
       <class name="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@a1153bc]" started-at="2024-09-03T16:27:08 IST" name="launchApplication" finished-at="2024-09-03T16:27:20 IST" duration-ms="11544" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@4c583ecf]" started-at="2024-09-05T12:04:57 IST" name="launchApplication" finished-at="2024-09-05T12:05:08 IST" duration-ms="10897" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="oldApplyFundingFlow()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@a1153bc]" started-at="2024-09-03T16:27:20 IST" name="oldApplyFundingFlow" finished-at="2024-09-03T16:28:33 IST" duration-ms="73056" status="FAIL">
+        <test-method signature="oldApplyFundingFlow()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@4c583ecf]" started-at="2024-09-05T12:05:08 IST" name="oldApplyFundingFlow" finished-at="2024-09-05T12:06:19 IST" duration-ms="71195" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -31,7 +31,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:819)
 at org.testng.Assert.assertEquals(Assert.java:829)
-at LendingPointTestAutomation.applyOldUITests.OldApplyPageTests.oldApplyFundingFlow(OldApplyPageTests.java:68)
+at LendingPointTestAutomation.applyOldUITests.OldApplyPageTests.oldApplyFundingFlow(OldApplyPageTests.java:69)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,21 +53,21 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oldApplyFundingFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@a1153bc]" started-at="2024-09-03T16:28:33 IST" name="tearDown" finished-at="2024-09-03T16:28:33 IST" duration-ms="268" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LendingPointTestAutomation.applyOldUITests.OldApplyPageTests@4c583ecf]" started-at="2024-09-05T12:06:19 IST" name="tearDown" finished-at="2024-09-05T12:06:20 IST" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- LendingPointTestAutomation.applyOldUITests.OldApplyPageTests -->
       <class name="LendingPointTestAutomation.applyUITests.ApplyPageTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" started-at="2024-09-03T16:27:08 IST" name="loadConfig" finished-at="2024-09-03T16:27:08 IST" duration-ms="247" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" started-at="2024-09-05T12:04:57 IST" name="loadConfig" finished-at="2024-09-05T12:04:57 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" started-at="2024-09-03T16:27:09 IST" name="launchApplication" finished-at="2024-09-03T16:27:31 IST" duration-ms="22469" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" started-at="2024-09-05T12:04:58 IST" name="launchApplication" finished-at="2024-09-05T12:05:21 IST" duration-ms="23413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="newApplyFundingFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" started-at="2024-09-03T16:27:31 IST" name="newApplyFundingFlow" data-provider="userData" finished-at="2024-09-03T16:28:06 IST" duration-ms="34651" status="FAIL">
+        <test-method signature="newApplyFundingFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" started-at="2024-09-05T12:05:21 IST" name="newApplyFundingFlow" data-provider="userData" finished-at="2024-09-05T12:05:54 IST" duration-ms="32694" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -146,18 +146,18 @@ at java.base/java.lang.Thread.run(Thread.java:842)
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1515fa215edfa4e53de829efccf95f3d, actions {actions=[org.openqa.selenium.interactions.Sequence@536056ec]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53387/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1515fa215edfa4e53de829efccf95f3d]]>
+Command: [673c05b79da5434e6a7b1caf4630e991, actions {actions=[org.openqa.selenium.interactions.Sequence@55af4765]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 673c05b79da5434e6a7b1caf4630e991]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1515fa215edfa4e53de829efccf95f3d, actions {actions=[org.openqa.selenium.interactions.Sequence@536056ec]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53387/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1515fa215edfa4e53de829efccf95f3d
+Command: [673c05b79da5434e6a7b1caf4630e991, actions {actions=[org.openqa.selenium.interactions.Sequence@55af4765]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 673c05b79da5434e6a7b1caf4630e991
 at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:520)
 at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:182)
 at org.openqa.selenium.json.JsonOutput.write0(JsonOutput.java:409)
@@ -189,9 +189,9 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
 at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:613)
 at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:613)
-at LendingPointTestAutomation.action.Action.click(Action.java:49)
-at LendingPointTestAutomation.pageFactory.applyNewUI.IncomeAddressFillPage.enterAddress(IncomeAddressFillPage.java:32)
-at LendingPointTestAutomation.applyUITests.ApplyPageTest.newApplyFundingFlow(ApplyPageTest.java:54)
+at LendingPointTestAutomation.action.Action.click(Action.java:51)
+at LendingPointTestAutomation.pageFactory.applyNewUI.IncomeAddressFillPage.enterAddress(IncomeAddressFillPage.java:33)
+at LendingPointTestAutomation.applyUITests.ApplyPageTest.newApplyFundingFlow(ApplyPageTest.java:55)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -227,9 +227,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1515fa215edfa4e53de829efccf95f3d, findElement {using=xpath, value=//input[@data-testid='fill-address-input']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53387/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1515fa215edfa4e53de829efccf95f3d
+Command: [673c05b79da5434e6a7b1caf4630e991, findElement {value=//input[@data-testid='fill-address-input'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 673c05b79da5434e6a7b1caf4630e991
 at jdk.internal.reflect.GeneratedConstructorAccessor28.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -259,11 +259,11 @@ at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newApplyFundingFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" started-at="2024-09-03T16:28:06 IST" name="tearDown" finished-at="2024-09-03T16:28:07 IST" duration-ms="411" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" started-at="2024-09-05T12:05:54 IST" name="tearDown" finished-at="2024-09-05T12:05:55 IST" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@128d2484]" started-at="2024-09-03T16:28:34 IST" name="afterSuite" finished-at="2024-09-03T16:28:34 IST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:LendingPointTestAutomation.applyUITests.ApplyPageTest@2a4fb17b]" started-at="2024-09-05T12:06:20 IST" name="afterSuite" finished-at="2024-09-05T12:06:20 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
