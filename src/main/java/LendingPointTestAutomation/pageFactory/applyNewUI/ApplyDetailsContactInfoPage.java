@@ -23,18 +23,18 @@ public class ApplyDetailsContactInfoPage extends BaseClass {
 	WebElement continueToVerificationButton;
 	
 	public void enterMobilePhone(String mobilePhone) {
-		Action.click(mobilePhoneTextBox);
+		Action.click(mobilePhoneTextBox, "Mobile textbox on New Apply flow");
 		//mobilePhoneTextBox.clear();
 		Action.selectBySendkeys(mobilePhone, mobilePhoneTextBox);
 	}
 	
 	public void enterEmail(String email) {
-		Action.type(emailTextBox, email);
+		Action.type(emailTextBox, email, "Email Address field");
 	}
 	
 	public VerifyPhone clickContinueButton() {
 		Action.fluentWait(continueToVerificationButton, 10);
-		Action.click(continueToVerificationButton);
+		Action.click(continueToVerificationButton, "Continue to verification button on New Apply flow");
 		return new VerifyPhone();
 	}
 

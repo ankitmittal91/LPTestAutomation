@@ -55,33 +55,33 @@ public class OldIncomeInformationPage extends BaseClass{
 	
 	public OldSignContractPage clickPaymentSetupNextButton() {
 		Action.moveToElement(paymentSetupNextButton);
-		Action.click(paymentSetupNextButton);
+		Action.click(paymentSetupNextButton, "Payment setup next button on Old Apply flow");
 		return new OldSignContractPage();
 	}
 	
 	public void enterEmployerName(String employerName) {
-		Action.type(employerNameTextBox, employerName);
+		Action.type(employerNameTextBox, employerName, "Employer name field on employment tab");
 	}
 	
 	public void enterEmployerPhone(String employerPhone) {
-		Action.type(employerPhoneTextBox, employerPhone);
+		employerPhoneTextBox.sendKeys(employerPhone);
 	}
 	
 	public void enterWorkEmail(String workEmailAddress) {
-		Action.type(workEmailTextBox, workEmailAddress);
+		Action.type(workEmailTextBox, workEmailAddress, "Work email field on employment tab");
 	}
 	
 	public void enterJobTitle(String jobTitle) {
 		Action.moveToElement(jobTitleTextBox);
-		Action.type(jobTitleTextBox, jobTitle);
+		Action.type(jobTitleTextBox, jobTitle, "Job title field on employment tab");
 	}
 	
 	public void enterStartDate(String startDate) {
-		Action.type(startDateTextBox, startDate);
+		Action.type(startDateTextBox, startDate, "Employment start date field on employment tab");
 	}
 	
 	public OldIncomeInformationPage clickEmploymentNextButton() {
-		Action.click(employmentPageNextButton);
+		Action.click(employmentPageNextButton, "Employment page next button on Old Apply flow");
 		return new OldIncomeInformationPage();
 	}
 

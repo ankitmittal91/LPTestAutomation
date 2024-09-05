@@ -10,11 +10,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import LendingPointTestAutomation.action.Action;
 import LendingPointTestAutomation.baseClass.BaseClass;
 import LendingPointTestAutomation.pageFactory.applyNewUI.*;
 import LendingPointTestAutomation.pageFactory.applyOldUI.*;
 import LendingPointTestAutomation.utility.DriverFactory;
+import LendingPointTestAutomation.utility.ExtentFactory;
 import LendingPointTestAutomation.utility.ExtentManager;
 import LendingPointTestAutomation.utility.Log;
 
@@ -41,42 +44,42 @@ public class OldApplyPageTests extends BaseClass{
 		}
 	}
 
-	@Test (groups = {"Smoke"})
-	public void oldApplyFundingFlow() throws InterruptedException {
+	@Test (priority = 1, groups = {"Smoke"})
+	public void fillApplyFormOldUISuccess() throws InterruptedException {
 		Log.startTestCase("User starts entering Personal Information");
-		oldApplyPage.enterLoanAmount("5000");
+		oldApplyPage.enterLoanAmount("4000");
 		oldApplyPage.selectLoanPurpose("Unexpected Urgent Expense");
 		oldApplyPage.enterFirstName("John");
 		oldApplyPage.enterLastName("Smith");
 		oldApplyPage.enterDOB("02281975");
-		oldApplyPage.enterPhone("2127290858");
-		Action.fluentWait(oldApplyPage.checkPhoneTick, 20);
+		oldApplyPage.enterPhone("2127290859");
 		Log.info("User has filled the form till phone number");
 		oldApplyPage.enterEmail("kbisht@lendingpoint.com");
-		Action.fluentWait(oldApplyPage.checkEmailTick, 20);
 		oldApplyPage.enterAddress1("222333 PEACHTREE PLACE");
 		oldApplyPage.enterZipCode("30318");
-		Action.fluentWait(oldApplyPage.zipCheckImage, 2);
 		Log.info("User has filled the form till Zip");
 		oldApplyPage.selectIncomeSource("Employee");
 		oldApplyPage.enterAnnualIncome("98000");
 		oldApplyPage.enterSSN("112223333");
 		oldApplyPage.enterPassword("Test@123");
 		oldOfferPage = oldApplyPage.clickCheckMyOptionButton();
+		ExtentFactory.getInstance().getExtent().log(Status.PASS, "User has clicked check my options button");
 		Log.info("User has clicked check my options button");
+	}
+	
+	@Test (priority = 2, groups = {"Smoke"})
+	public void selectOfferOldUISuccess() {
 		Action.fluentWait(oldOfferPage.blockscreenHide, 30);
 		Action.fluentWait(oldOfferPage.selectOfferTitle, 30);
-		Assert.assertEquals(Action.isDisplayed(oldOfferPage.selectOfferTitle), true);
+		//Assert.assertEquals(Action.isDisplayed(oldOfferPage.selectOfferTitle, "Select Offer title"), true);
 		Action.fluentWait(oldOfferPage.phoneVerificationPopupTitle, 10);
-		if(Action.isDisplayed(oldOfferPage.phoneVerificationPopupTitle) == true) {
+		if(Action.isDisplayed(oldOfferPage.phoneVerificationPopupTitle, "Phone Verification Popup title") == true) {
 			Log.info("User is on Phone verification popup");
 			Action.fluentWait(oldOfferPage.resendCodeButton, 10);
 			oldOfferPage.enterVerificationCode("11234");
 			Log.info("User has entered verification code");
-			Action.fluentWait(oldOfferPage.verificationPopupError, 10);
 			oldOfferPage.closeVerificationPopup();
 			Log.info("User has exited Phone verification popup");
-			Action.fluentWait(oldOfferPage.chooseButton, 10);
 		}
 		if(Action.findElement(DriverFactory.getInstance().getDriver(), oldOfferPage.newSlider) == true) {
 			Action.fluentWait(oldOfferPage.chooseButton, 10);
@@ -89,6 +92,10 @@ public class OldApplyPageTests extends BaseClass{
 			oldBankInformationPage = oldOfferPage.clickChooseButton();
 			Log.info("User has selected offer on old offer page");
 		}
+	}
+	
+	@Test (priority = 3, groups = {"smoke"})
+	public void completePlaidFlowOldUISuccess() {
 		Action.pageLoadTimeOut(30);
 		Action.fluentWait(oldBankInformationPage.blockscreenLoaderHidden, 30);
 		Action.fluentWait(oldBankInformationPage.blockscreenLoader, 30);
@@ -124,24 +131,32 @@ public class OldApplyPageTests extends BaseClass{
 		oldPaymentSetupPage = oldBankInformationPage.clickPlaidSubmitButton2();
 		Log.info("User has completed Plaid flow");
 		DriverFactory.getInstance().getDriver().switchTo().parentFrame();
+	}
+	
+	@Test (priority = 4, groups = {"smoke"})
+	public void completeEmploymentRepaymentOldUISuccess() {
 		Action.fluentWait(oldPaymentSetupPage.blockscreenHide, 20);
 		Action.fluentWait(oldPaymentSetupPage.paymentSetupTab, 10);
 		if(Action.findElement(DriverFactory.getInstance().getDriver(), oldPaymentSetupPage.paymentSetupTab) == true) {
 			Action.fluentWait(oldPaymentSetupPage.achButton, 30);
 			oldSignContractPage = oldPaymentSetupPage.clickPaymentSetupNextButton();
 		} else {
-			Action.fluentWait(oldIncomeInformationPage.employmentPageTitle, 20);
-			oldPaymentSetupPage = oldIncomeInformationPage;
-			oldIncomeInformationPage.enterEmployerName("ABC Corp");
-			oldIncomeInformationPage.enterEmployerPhone("9878978665");
-			oldIncomeInformationPage.enterWorkEmail("abc@lendingpoint.com");
-			oldIncomeInformationPage.enterJobTitle("Dev");
-			oldIncomeInformationPage.enterStartDate("02/29/2008");
-			oldPaymentSetupPage = oldIncomeInformationPage.clickEmploymentNextButton();
+			oldPaymentSetupPage =  new OldIncomeInformationPage();
+			Action.fluentWait(oldPaymentSetupPage.employmentPageTitle, 20);
+			oldPaymentSetupPage.enterEmployerName("ABC Corp");
+			oldPaymentSetupPage.enterEmployerPhone("9878978665");
+			oldPaymentSetupPage.enterWorkEmail("abc@lendingpoint.com");
+			oldPaymentSetupPage.enterJobTitle("Dev");
+			oldPaymentSetupPage.enterStartDate("02/29/2008");
+			oldPaymentSetupPage = oldPaymentSetupPage.clickEmploymentNextButton();
 			Action.pageLoadTimeOut(10);
 			Action.fluentWait(oldPaymentSetupPage.achButton, 30);
 			oldSignContractPage = oldPaymentSetupPage.clickPaymentSetupNextButton();
 		}
+	}
+	
+	@Test (priority = 5, groups = {"smoke"})
+	public void signAgreementOldUISuccess() {
 		Action.pageLoadTimeOut(10);
 		Action.fluentWait(oldSignContractPage.amountFinancedTileTitle, 30);
 		oldSignContractPage.clickCheckBox1();

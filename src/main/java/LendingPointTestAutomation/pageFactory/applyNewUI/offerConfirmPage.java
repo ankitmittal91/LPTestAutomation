@@ -22,7 +22,7 @@ public class offerConfirmPage extends BaseClass {
 	
 	public connectDepositAccountPage clickLetsGoButton() {
 		Action.moveToElement(letsGoButton);
-		Action.click(letsGoButton);
+		Action.click(letsGoButton, "Lets Go button on New Apply flow");
 		return new connectDepositAccountPage();
 	}
 

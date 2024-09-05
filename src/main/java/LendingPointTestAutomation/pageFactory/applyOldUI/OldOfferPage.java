@@ -50,7 +50,7 @@ public class OldOfferPage extends BaseClass{
 	
 	public OldBankInformationPage clickChooseButton() {
 		//Action.moveToElement(getDriver(), chooseButton);
-		Action.click(chooseButton);
+		Action.click(chooseButton, "Choose button on Offer page");
 		return new OldBankInformationPage();
 	}
 	
@@ -61,10 +61,12 @@ public class OldOfferPage extends BaseClass{
 			String s = new StringBuilder().append(c).toString();
 			DriverFactory.getInstance().getDriver().findElement(By.xpath(xpath)).sendKeys(s);
 		}
+		Action.fluentWait(verificationPopupError, 10);
 	}
 	
 	public void closeVerificationPopup() {
-		Action.click(verificationPopupClose);
+		Action.click(verificationPopupClose, "Close verification popup button");
+		Action.fluentWait(chooseButton, 10);
 	}
 
 }

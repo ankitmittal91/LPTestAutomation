@@ -22,7 +22,7 @@ public class selectOfferPage extends BaseClass {
 	
 	public offerConfirmPage clickConfirmOfferButton() {
 		Action.moveToElement(confirmOfferButton);
-		Action.click(confirmOfferButton);
+		Action.click(confirmOfferButton, "Confirm Offer button on New Apply flow");
 		return new offerConfirmPage();
 	}
 

@@ -35,7 +35,7 @@ public class VerifyPhone extends BaseClass{
 	}
 	
 	public IncomeAddressFillPage clickVerifyButton() {
-		Action.click(verifyButton);
+		Action.click(verifyButton, "Verify verification code button on New Apply flow");
 		return new IncomeAddressFillPage();
 	}
 }

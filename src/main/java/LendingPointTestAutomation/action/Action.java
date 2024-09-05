@@ -27,7 +27,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.Status;
+
 import LendingPointTestAutomation.utility.DriverFactory;
+import LendingPointTestAutomation.utility.ExtentFactory;
 
 
 public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
@@ -46,9 +49,12 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 		js.executeScript("arguments[0].scrollIntoView();", ele);
 	}
 
-	public static void click(WebElement ele) {
+	public static void click(WebElement ele, String buttonName) {
 		Actions act = new Actions(DriverFactory.getInstance().getDriver());
 		act.moveToElement(ele).click().build().perform();
+		if(ExtentFactory.getInstance().getExtent() != null) {
+			ExtentFactory.getInstance().getExtent().log(Status.INFO, "User has clicked "+buttonName+" successfully");
+		}
 	}
 	
 	public static String getText_Name(WebDriver driver, WebElement element) throws InterruptedException {
@@ -78,18 +84,18 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	}
 
 	
-	public static boolean isDisplayed(WebElement ele) {
+	public static boolean isDisplayed(WebElement ele, String fieldName) {
 		boolean flag = false;
 		flag = findElement(DriverFactory.getInstance().getDriver(), ele);
 		if (flag) {
 			flag = ele.isDisplayed();
 			if (flag) {
-				System.out.println("The element is Displayed");
+				System.out.println("The element is Displayed" + fieldName);
 			} else {
-				System.out.println("The element is not Displayed");
+				System.out.println("The element is not Displayed " + fieldName);
 			}
 		} else {
-			System.out.println("Not displayed ");
+			System.out.println("Not displayed " + fieldName);
 		}
 		return flag;
 	}
@@ -130,7 +136,7 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 	 * Type text at location
 	 * @return - true/false
 	 */
-	public static boolean type(WebElement ele, String text) {
+	public static boolean type(WebElement ele, String text, String fieldName) {
 		boolean flag = false;
 		try {
 			flag = ele.isDisplayed();
@@ -138,13 +144,22 @@ public class Action extends LendingPointTestAutomation.baseClass.BaseClass {
 			ele.sendKeys(text);
 			flag = true;
 		} catch (Exception e) {
-			System.out.println("Location Not found");
+			//System.out.println("Location Not found");
+			if(ExtentFactory.getInstance().getExtent() != null) {
+				ExtentFactory.getInstance().getExtent().log(Status.FAIL, e);
+			}	
 			flag = false;
 		} finally {
 			if (flag) {
-				System.out.println("Successfully entered value");
+				if(ExtentFactory.getInstance().getExtent() != null) {
+					ExtentFactory.getInstance().getExtent().log(Status.INFO, "User entered value in "+fieldName+" successfully");
+				}
+				//System.out.println("Successfully entered value");
 			} else {
-				System.out.println("Unable to enter value");
+				//System.out.println("Unable to enter value");
+				if(ExtentFactory.getInstance().getExtent() != null) {
+					ExtentFactory.getInstance().getExtent().log(Status.INFO, "Unable to enter value in "+fieldName);
+				}
 			}
 
 		}

@@ -28,16 +28,16 @@ public class OldSignContractPage extends BaseClass{
 	
 	public void clickCheckBox1() {
 		Action.moveToElement(checkBox1);
-		Action.click(checkBox1);
+		Action.click(checkBox1, "TILA consent checkbox 1 on Old Apply flow");
 	}
 	
 	public void clickCheckBox2() {
-		Action.click(checkBox2);
+		Action.click(checkBox2, "TILA consent checkbox 2 on Old Apply flow");
 	}
 	
 	public void clickSignAgreementButton() {
 		Action.moveToElement(signAgreementButton);
-		Action.click(signAgreementButton);
+		Action.click(signAgreementButton, "Sign Agreement button on Old Apply flow");
 	}
 
 }

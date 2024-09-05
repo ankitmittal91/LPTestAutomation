@@ -30,15 +30,15 @@ public class ApplyPage extends BaseClass {
 	public WebElement continueButton;
 	
 	public void enterFirstName(String firstName) {
-		Action.type(firstNameTextBox, firstName);
+		Action.type(firstNameTextBox, firstName, "First name field");
 	}
 	
 	public void enterLastName(String lastName) {
-		Action.type(lastNameTextBox, lastName);
+		Action.type(lastNameTextBox, lastName, "Last name field");
 	}
 	
 	public void enterLoanAmount(String loanAmount) {
-		Action.click(loanAmountTextBox);
+		Action.click(loanAmountTextBox, "Loan Amount Textbox");
 		loanAmountTextBox.clear();
 		Action.enterTextByCharacter(loanAmountTextBox, loanAmount, 0);
 	}
@@ -49,7 +49,7 @@ public class ApplyPage extends BaseClass {
 	
 	public ApplyDetailsContactInfoPage clickContinueButton() {
 		Action.fluentWait(continueButton, 10);
-		Action.click(continueButton);
+		Action.click(continueButton, "Continue button on Apply Page");
 		return new ApplyDetailsContactInfoPage();
 	}
 }

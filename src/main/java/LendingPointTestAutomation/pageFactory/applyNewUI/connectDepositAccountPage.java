@@ -21,7 +21,7 @@ public class connectDepositAccountPage extends BaseClass {
 	WebElement connectBankButton;
 	
 	public void clickConnectBankButton() {
-		Action.click(connectBankButton);
+		Action.click(connectBankButton, "Connect bank account button on New Apply flow");
 	}
 
 }

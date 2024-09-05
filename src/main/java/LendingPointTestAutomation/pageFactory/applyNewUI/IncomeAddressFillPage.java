@@ -30,13 +30,13 @@ public class IncomeAddressFillPage extends BaseClass {
 	WebElement continueToIncomeButton;
 	
 	public void enterAddress(String address) {
-		Action.click(addressTextBox);
-		Action.type(addressTextBox, address);
+		Action.click(addressTextBox, "Address textbox on New Apply flow");
+		Action.type(addressTextBox, address, "Address field");
 	}
 	
 	public void enterCity(String city) {
-		Action.click(cityTextBox);
-		Action.type(cityTextBox, city);
+		Action.click(cityTextBox, "City textbox on New Apply flow");
+		Action.type(cityTextBox, city, "City field");
 	}
 	
 	public void selectState(String state) {
@@ -44,12 +44,12 @@ public class IncomeAddressFillPage extends BaseClass {
 	}
 	
 	public void enterZip(String zip) {
-		Action.click(zipTextBox);
-		Action.type(zipTextBox, zip);
+		Action.click(zipTextBox, "Zip Code textbox on New Apply flow");
+		Action.type(zipTextBox, zip, "Zip Code field");
 	}
 	
 	public YourIncomePage clickContinuetoIncomeButton() {
-		Action.click(continueToIncomeButton);
+		Action.click(continueToIncomeButton, "Continue to Income button on New Apply flow");
 		return new YourIncomePage();
 	}
 

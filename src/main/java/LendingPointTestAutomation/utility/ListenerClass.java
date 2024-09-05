@@ -18,29 +18,40 @@ import LendingPointTestAutomation.baseClass.BaseClass;
 public class ListenerClass extends ExtentManager implements ITestListener {
 
 	Action action= new Action();
-	private static ThreadLocal<ExtentTest> extent_test = new ThreadLocal<ExtentTest>();
+	//private static ThreadLocal<ExtentTest> extent_test = new ThreadLocal<ExtentTest>();
 	
 	public void onTestStart(ITestResult result) {
-		extent_test.set(extent.createTest(result.getMethod().getMethodName())); 
+		ExtentFactory.getInstance().setExtent(extent.createTest(result.getMethod().getMethodName())); 
 		//extent_test.set(test);
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
-			extent_test.get().log(Status.PASS, "Pass Test case is: " + result.getMethod().getMethodName());
+		try {
+			ExtentFactory.getInstance().getExtent().log(Status.PASS, "Pass Test case is: " + result.getMethod().getMethodName());
+			ExtentFactory.getInstance().getExtent().log(Status.PASS,
+					MarkupHelper.createLabel(result.getThrowable() + " - Test Case Passed", ExtentColor.GREEN));
+			String imgPath = action.screenShot(DriverFactory.getInstance().getDriver(), result.getMethod().getMethodName());
+			//extent_test.get().addScreenCaptureFromPath(imgPath);
+			ExtentFactory.getInstance().getExtent().pass("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		}
 	}
 
 	public void onTestFailure(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			try {
-				extent_test.get().log(Status.FAIL,
+				ExtentFactory.getInstance().getExtent().log(Status.FAIL,
 						MarkupHelper.createLabel(result.getMethod().getMethodName() + " - Test Case Failed", ExtentColor.RED));
-				extent_test.get().log(Status.FAIL,
+				ExtentFactory.getInstance().getExtent().log(Status.FAIL,
 						MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 				String imgPath = action.screenShot(DriverFactory.getInstance().getDriver(), result.getMethod().getMethodName());
 				//extent_test.get().addScreenCaptureFromPath(imgPath);
-				extent_test.get().fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+				ExtentFactory.getInstance().getExtent().fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -51,7 +62,7 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		if (result.getStatus() == ITestResult.SKIP) {
-			extent_test.get().log(Status.SKIP, "Skipped Test case is: " + result.getMethod().getMethodName());
+			ExtentFactory.getInstance().getExtent().log(Status.SKIP, "Skipped Test case is: " + result.getMethod().getMethodName());
 		}
 	}
 

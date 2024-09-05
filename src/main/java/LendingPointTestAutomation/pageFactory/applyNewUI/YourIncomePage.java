@@ -27,7 +27,7 @@ public class YourIncomePage extends BaseClass{
 	WebElement continueToAboutYouButton;
 	
 	public void enterAnnualIncome(String annualIncome) {
-		Action.type(annualIncomeTextBox, annualIncome);
+		Action.type(annualIncomeTextBox, annualIncome, "Annual Income field");
 	}
 	
 	public void selectIncomeType(String incomeType) {
@@ -36,12 +36,12 @@ public class YourIncomePage extends BaseClass{
 	
 	public void enterCompanyName(String companyName) {
 		Action.moveToElement(companyNameTextBox);
-		Action.type(companyNameTextBox, companyName);
+		Action.type(companyNameTextBox, companyName, "Company name field");
 	}
 	
 	public AboutYouDOBSSNPage clickContinueToAboutYouButton() {
 		Action.moveToElement(continueToAboutYouButton);
-		Action.click(continueToAboutYouButton);
+		Action.click(continueToAboutYouButton, "Continue to About You button on New Apply flow");
 		return new AboutYouDOBSSNPage();
 	}
 

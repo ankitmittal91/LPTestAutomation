@@ -24,18 +24,18 @@ public class AboutYouDOBSSNPage extends BaseClass{
 	WebElement seeOptionsButton;
 	
 	public void enterDOB(String dob) {
-		Action.click(dobTextBox);
-		Action.type(dobTextBox, dob);
+		Action.click(dobTextBox, "DOB textbox on New Apply flow");
+		Action.type(dobTextBox, dob, "Date of birth field");
 	}
 	
 	public void enterSSN(String ssn) {
-		Action.click(ssnTextBox);
+		Action.click(ssnTextBox, "SSN textbox on New Apply flow");
 		Action.enterTextByCharacter(ssnTextBox, ssn, 0);
 	}
 	
 	public selectOfferPage clickSeeOptionsButton() {
 		Action.moveToElement(seeOptionsButton);
-		Action.click(seeOptionsButton);
+		Action.click(seeOptionsButton, "See Options button on New Apply flow");
 		return new selectOfferPage();
 	}
 

@@ -17,13 +17,16 @@ public class ExtentFactory {
 	
 	//private static ExtentReports extent;
 	//ThreadLocal<ExtentReports> extent = new ThreadLocal<ExtentReports>();
+	private static ThreadLocal<ExtentTest> extent_test = new ThreadLocal<ExtentTest>();
 	
-	//public ExtentReports getExtent() {
+	public ExtentTest getExtent() {
 		//return extent;
-	//}
+		return extent_test.get();
+	}
 	
-	public void setExtent() {
+	public void setExtent(ExtentTest extentTest) {
 		//extent.set(exten);
+		extent_test.set(extentTest);
 	}
 	
 	//public void dumpExtent() {

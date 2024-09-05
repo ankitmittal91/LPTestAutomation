@@ -54,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 5, 2024 12:04:57 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 5, 2024 06:43:15 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,7 +69,8 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -112,10 +113,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='16.667%'><span class='strong'>1</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='83.333%'>5</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -133,17 +134,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>oldApplyFundingFlow</span>
-						<span class='test-time'>Sep 5, 2024 12:05:08 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>fillApplyFormOldUISuccess</span>
+						<span class='test-time'>Sep 5, 2024 06:43:32 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 5, 2024 12:05:08 PM</span>
-	<span class='label end-time'>Sep 5, 2024 12:06:19 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 11s+310ms</span>
+	<span class='label start-time'>Sep 5, 2024 06:43:32 PM</span>
+	<span class='label end-time'>Sep 5, 2024 06:44:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+604ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -155,28 +156,140 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:06:19 PM</td>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:32 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>oldApplyFundingFlow - Test Case Failed</span>
+						User entered value in Loan Amount field successfully
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:06:19 PM</td>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:33 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [true] but found [false] - Test Case Failed</span>
+						User entered value in First Name field successfully
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:06:19 PM</td>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:34 PM</td>
+				<td class='step-details'>
+						User entered value in Last Name field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:34 PM</td>
+				<td class='step-details'>
+						User has clicked DOB textbox on Old Apply page successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:40 PM</td>
+				<td class='step-details'>
+						User entered value in Email Address field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:40 PM</td>
+				<td class='step-details'>
+						User has clicked Address textbox on Old Apply page successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:43 PM</td>
+				<td class='step-details'>
+						User entered value in Address field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:44 PM</td>
+				<td class='step-details'>
+						User entered value in Zip Code Field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:05 PM</td>
+				<td class='step-details'>
+						User has clicked Annual Income textbox on Old Apply page successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:05 PM</td>
+				<td class='step-details'>
+						User has clicked SSN textbox on Old Apply page successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
+				<td class='step-details'>
+						User entered value in SSN field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
+				<td class='step-details'>
+						User entered value in Password field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
+				<td class='step-details'>
+						User has clicked Check my options button on Old Apply page successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
+				<td class='step-details'>
+						User has clicked check my options button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
+				<td class='step-details'>
+						Pass Test case is: fillApplyFormOldUISuccess
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:44:06 PM</td>
 				<td class='step-details'>
 						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\oldApplyFundingFlow_20240905120619.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\oldApplyFundingFlow_20240905120619.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\oldApplyFundingFlow_20240905120619.png'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\fillApplyFormOldUISuccess_20240905064406.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\fillApplyFormOldUISuccess_20240905064406.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\fillApplyFormOldUISuccess_20240905064406.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -187,14 +300,135 @@
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>newApplyFundingFlow</span>
-						<span class='test-time'>Sep 5, 2024 12:05:21 PM</span>
+						<span class='test-time'>Sep 5, 2024 06:43:44 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 5, 2024 12:05:21 PM</span>
-	<span class='label end-time'>Sep 5, 2024 12:05:54 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+29ms</span>
+	<span class='label start-time'>Sep 5, 2024 06:43:44 PM</span>
+	<span class='label end-time'>Sep 5, 2024 06:44:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+789ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						User entered value in First name field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:46 PM</td>
+				<td class='step-details'>
+						User entered value in Last name field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:47 PM</td>
+				<td class='step-details'>
+						User has clicked Loan Amount Textbox successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:49 PM</td>
+				<td class='step-details'>
+						User has clicked Continue button on Apply Page successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:51 PM</td>
+				<td class='step-details'>
+						User has clicked Mobile textbox on New Apply flow successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:53 PM</td>
+				<td class='step-details'>
+						User entered value in Email Address field successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:54 PM</td>
+				<td class='step-details'>
+						User has clicked Continue to verification button on New Apply flow successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:03 PM</td>
+				<td class='step-details'>
+						User has clicked Verify verification code button on New Apply flow successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>newApplyFundingFlow - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [437bdfb385a8bf2358728c367384e180, actions {actions=[org.openqa.selenium.interactions.Sequence@53bc54e4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64886}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64886/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 437bdfb385a8bf2358728c367384e180 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:24 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\newApplyFundingFlow_20240905064423.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\newApplyFundingFlow_20240905064423.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\newApplyFundingFlow_20240905064423.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>selectOfferOldUISuccess</span>
+						<span class='test-time'>Sep 5, 2024 06:44:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 5, 2024 06:44:06 PM</span>
+	<span class='label end-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 21s+303ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -208,32 +442,185 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:05:54 PM</td>
+				<td class='timestamp'>6:45:28 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>newApplyFundingFlow - Test Case Failed</span>
+						<span class='badge white-text red'>selectOfferOldUISuccess - Test Case Failed</span>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:05:54 PM</td>
+				<td class='timestamp'>6:45:28 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [673c05b79da5434e6a7b1caf4630e991, actions {actions=[org.openqa.selenium.interactions.Sequence@55af4765]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 673c05b79da5434e6a7b1caf4630e991 - Test Case Failed</span>
+Command: [fc49a4db75f5b00059e5766ce5c056d5, actions {actions=[org.openqa.selenium.interactions.Sequence@2744b823]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64887}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64887/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fc49a4db75f5b00059e5766ce5c056d5 - Test Case Failed</span>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>12:05:54 PM</td>
+				<td class='timestamp'>6:45:28 PM</td>
 				<td class='step-details'>
 						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\newApplyFundingFlow_20240905120554.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\newApplyFundingFlow_20240905120554.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\newApplyFundingFlow_20240905120554.png'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\selectOfferOldUISuccess_20240905064528.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\selectOfferOldUISuccess_20240905064528.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\selectOfferOldUISuccess_20240905064528.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>completePlaidFlowOldUISuccess</span>
+						<span class='test-time'>Sep 5, 2024 06:45:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label end-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+139ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>completePlaidFlowOldUISuccess - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.NullPointerException: Cannot read field "blockscreenLoaderHidden" because "this.oldBankInformationPage" is null - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\completePlaidFlowOldUISuccess_20240905064528.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\completePlaidFlowOldUISuccess_20240905064528.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\completePlaidFlowOldUISuccess_20240905064528.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>completeEmploymentRepaymentOldUISuccess</span>
+						<span class='test-time'>Sep 5, 2024 06:45:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label end-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+154ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>completeEmploymentRepaymentOldUISuccess - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.NullPointerException: Cannot read field "blockscreenHide" because "this.oldPaymentSetupPage" is null - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\completeEmploymentRepaymentOldUISuccess_20240905064528.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\completeEmploymentRepaymentOldUISuccess_20240905064528.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\completeEmploymentRepaymentOldUISuccess_20240905064528.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>signAgreementOldUISuccess</span>
+						<span class='test-time'>Sep 5, 2024 06:45:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label end-time'>Sep 5, 2024 06:45:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+141ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>signAgreementOldUISuccess - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.NullPointerException: Cannot read field "amountFinancedTileTitle" because "this.oldSignContractPage" is null - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:28 PM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\signAgreementOldUISuccess_20240905064528.png' src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\signAgreementOldUISuccess_20240905064528.png' data-src='C:\Users\ankit.mittal\eclipse-workspace\LendingPointTestAutomation\Screenshots\signAgreementOldUISuccess_20240905064528.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -269,7 +656,7 @@ Session ID: 673c05b79da5434e6a7b1caf4630e991 - Test Case Failed</span>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -281,19 +668,19 @@ Session ID: 673c05b79da5434e6a7b1caf4630e991 - Test Case Failed</span>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 5, 2024 12:04:57 PM</div>
+					<div class='panel-lead'>Sep 5, 2024 06:43:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 5, 2024 12:06:20 PM</div>
+			 		<div class='panel-lead'>Sep 5, 2024 06:45:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 22s+659ms</div>
+					<div class='panel-lead'>0h 2m 13s+444ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -336,14 +723,14 @@ Session ID: 673c05b79da5434e6a7b1caf4630e991 - Test Case Failed</span>
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
-				passParent: 0,
-				failParent: 2,
+                parentCount: 6,
+				passParent: 1,
+				failParent: 5,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
+				exceptionsParent: 5,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -368,7 +755,7 @@ Session ID: 673c05b79da5434e6a7b1caf4630e991 - Test Case Failed</span>
 		</script>
 		<script>
 			var timeline = {
-			        "oldApplyFundingFlow":71.31,"newApplyFundingFlow":33.029
+			        "fillApplyFormOldUISuccess":34.604,"newApplyFundingFlow":39.789,"selectOfferOldUISuccess":81.303,"completePlaidFlowOldUISuccess":0.139,"completeEmploymentRepaymentOldUISuccess":0.154,"signAgreementOldUISuccess":0.141
 			};
 		</script>
 		<script src='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

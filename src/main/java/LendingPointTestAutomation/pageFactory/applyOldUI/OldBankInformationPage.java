@@ -60,46 +60,46 @@ public class OldBankInformationPage extends BaseClass{
 	public WebElement plaidSavingAccountTile;
 	
 	public OldBankInformationPage clickConnectPlaidButton() {
-		Action.click(connectPlaidButton);
+		Action.click(connectPlaidButton, "Plaid Connect button on Old Apply flow");
 		return new OldBankInformationPage();
 	}
 	
 	public void clickContinuePlaidButton() {
 		Action.moveToElement(plaidContinueButton);
-		Action.click(plaidContinueButton);
+		Action.click(plaidContinueButton, "Plaid Continue button on Old Apply flow");
 	}
 	
 	public void searchPlaidBank(String bankName) {
-		Action.type(plaidBankSearchBox, bankName);
+		Action.type(plaidBankSearchBox, bankName, "Bank Name field on Plaid screen");
 	}
 	
 	public void selectPlaidBank1() {
-		Action.click(plaidSearchResultTile1);
+		Action.click(plaidSearchResultTile1, "Plaid bank search textbox on Old Apply flow");
 	}
 	
 	public void selectPlaidBank2() {
-		Action.click(plaidSearchResultTile2);
+		Action.click(plaidSearchResultTile2, "Plaid bank tile on Old Apply flow");
 	}
 	
 	public void enterPlaidUsername(String plaidUsername) {
-		Action.type(plaidUsernameTextBox, plaidUsername);
+		Action.type(plaidUsernameTextBox, plaidUsername, "Plaid username field");
 	}
 	
 	public void enterPlaidPassword(String plaidPassword) {
-		Action.type(plaidPasswordTextBox, plaidPassword);
+		Action.type(plaidPasswordTextBox, plaidPassword, "Plaid password field");
 	}
 	
 	public void clickPlaidSubmitButton1() {
-		Action.click(plaidSubmitButton);
+		Action.click(plaidSubmitButton, "Plaid credentials submit button on Old Apply flow");
 	}
 	
 	public OldIncomeInformationPage clickPlaidSubmitButton2() {
-		Action.click(plaidSubmitButton);
+		Action.click(plaidSubmitButton, "Plaid submit button on Old Apply flow");
 		return new OldIncomeInformationPage();
 	}
 	
 	public void clickPlaidSavingAccountTile() {
-		Action.click(plaidSavingAccountTile);
+		Action.click(plaidSavingAccountTile, "Plaid Account tile on Old Apply flow");
 	}
 
 }

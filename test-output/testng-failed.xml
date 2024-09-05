@@ -19,8 +19,11 @@
       <class name="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests">
         <methods>
           <include name="afterSuite"/>
+          <include name="completePlaidFlowOldUISuccess"/>
           <include name="loadConfig"/>
-          <include name="oldApplyFundingFlow"/>
+          <include name="completeEmploymentRepaymentOldUISuccess"/>
+          <include name="selectOfferOldUISuccess"/>
+          <include name="signAgreementOldUISuccess"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
         </methods>

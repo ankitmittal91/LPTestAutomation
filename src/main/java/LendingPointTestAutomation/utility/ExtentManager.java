@@ -11,22 +11,24 @@ public class ExtentManager {
 	//public static ExtentTest test;
 	
 	public static ExtentReports setReport() {
-	htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport.html");
-	htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"/extentReport_config.xml");
+		htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport.html");
+		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"/extentReport_config.xml");
 	
-	extent = new ExtentReports();
-	extent.attachReporter(htmlReporter);
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
 	
-	extent.setSystemInfo("HostName", "MyHost");
-	extent.setSystemInfo("ProjectName", "LendingPoint");
-	extent.setSystemInfo("QA", "Ankit Mittal");
+		extent.setSystemInfo("HostName", "MyHost");
+		extent.setSystemInfo("ProjectName", "LendingPoint");
+		extent.setSystemInfo("QA", "Ankit Mittal");
 	
-	extent.setSystemInfo("OS", "Win11");
-	extent.setSystemInfo("Browser", "Chrome");
-	return extent;
+		extent.setSystemInfo("OS", "Win11");
+		extent.setSystemInfo("Browser", "Chrome");
+		return extent;
 	}
 	
 	public static void endReport() {
-	extent.flush();
+		if(extent != null) {
+			extent.flush();
+		}
 	}
 }
