@@ -4274,3 +4274,8 @@
 2024-09-05 18:45:29 DEBUG cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view_en.ftl"): Not found
 2024-09-05 18:45:29 DEBUG cache:45 - TemplateLoader.findTemplateSource("v3html/logs-view/v3-html-testrunner-logs-view.ftl"): Found
 2024-09-05 18:45:29 DEBUG cache:45 - Loading template for "v3html/logs-view/v3-html-testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/ankit.mittal/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/v3html/logs-view/v3-html-testrunner-logs-view.ftl"
+2024-09-06 12:55:33 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-09-06 12:57:16 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-09-06 12:58:01 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-09-11 19:06:55 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=
+2024-09-11 19:07:43 INFO  Log:10 - =startTestCase======User starts entering Personal Information TEST START======startTestCase=

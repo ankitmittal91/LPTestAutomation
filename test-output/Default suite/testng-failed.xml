@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests">
+      <class name="LendingPointTestAutomation.applyUITests.ApplyPageTest">
         <methods>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
-          <include name="oldApplyFundingFlow"/>
+          <include name="newApplyFundingFlow" invocation-numbers="0 1"/>
+          <include name="newApplyFundingFlow1"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- LendingPointTestAutomation.applyOldUITests.OldApplyPageTests -->
+      </class> <!-- LendingPointTestAutomation.applyUITests.ApplyPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

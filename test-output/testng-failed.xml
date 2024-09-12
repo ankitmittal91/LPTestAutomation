@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="LendingPointTestAutomation.utility.ListenerClass"/>
-  </listeners>
-  <test thread-count="2" parallel="classes" name="Chrome_Browser_Suite(failed)">
-    <parameter name="browser" value="Chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="LendingPointTestAutomation.applyUITests.ApplyPageTest">
         <methods>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
-          <include name="newApplyFundingFlow" invocation-numbers="0"/>
+          <include name="newApplyFundingFlow" invocation-numbers="0 1"/>
+          <include name="newApplyFundingFlow1"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- LendingPointTestAutomation.applyUITests.ApplyPageTest -->
-      <class name="LendingPointTestAutomation.applyOldUITests.OldApplyPageTests">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="completePlaidFlowOldUISuccess"/>
-          <include name="loadConfig"/>
-          <include name="completeEmploymentRepaymentOldUISuccess"/>
-          <include name="selectOfferOldUISuccess"/>
-          <include name="signAgreementOldUISuccess"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- LendingPointTestAutomation.applyOldUITests.OldApplyPageTests -->
     </classes>
-  </test> <!-- Chrome_Browser_Suite(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
